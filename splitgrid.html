@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from site9293211.92.webydo.com/splitgrid.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Jan 2017 19:32:17 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Full Grid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="images/base.css"/>
+	<link rel="stylesheet" type="text/css" href="images/ip_master_pt_rtl.master7a79.css?v=69820541510"/>
+	<link rel="stylesheet" type="text/css" href="images/splitgrid7a79.css?v=69820541510"/>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,hebrew,cyrillic"/>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,300italic,400,italic,700,700italic,900,900italic&amp;subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,hebrew,cyrillic"/>
+<script type="text/javascript" src="images/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="images/ip_master_pt_rtl.master.js"></script>
+<script type="text/javascript" src="images/jssor.slider.mini.js"></script>
+<script src="images/utils7a79.js?v=69820541510" type="text/javascript"></script>
+<script src="images/3dparallax7a79.js?v=69820541510"></script>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald" />
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"> 
+<title></title> 
+<style>    
+ body{margin:0;}  
+ 
+ #slider_container_innerMagicWidget42_ey .gridwrapper_div{        
+width: 50%;         
+height: 500px;   
+float:left;        
+overflow: hidden;
+position: relative;
+}
+
+#slider_container_innerMagicWidget42_ey .gridwrapper_div > div {        
+width: 100%;         
+height: 100%;         
+background-repeat: no-repeat;         
+background-size: cover;         
+background-position: 50% 50%;     
+position: absolute;
+top 0;
+}
+
+
+
+/* Zoom In Start */
+#slider_container_innerMagicWidget42_ey.zoomin_innerMagicWidget42_ey .gridwrapper_div > div{ 
+background-size: cover ;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#slider_container_innerMagicWidget42_ey.zoomin_innerMagicWidget42_ey .gridwrapper_div > div:hover { 
+    -webkit-transform: scale(1.22);
+    transform: scale(1.22);
+}
+/* Zoom In End */
+
+
+
+/* Zoom Out Start */
+#slider_container_innerMagicWidget42_ey.zoomout_innerMagicWidget42_ey .gridwrapper_div > div:first-child { 
+background-size: cover ;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#slider_container_innerMagicWidget42_ey.zoomout_innerMagicWidget42_ey .gridwrapper_div > div:first-child:hover { 
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+/* Zoom Out End */
+
+/* Slide Start */
+#slider_container_innerMagicWidget42_ey.slide_innerMagicWidget42_ey .gridwrapper_div > div:first-child{ 
+background-size: cover ;
+    margin-left: 30px;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#slider_container_innerMagicWidget42_ey.slide_innerMagicWidget42_ey .gridwrapper_div > div:first-child:hover { 
+    margin-left: 0;
+}
+/* Slide End */
+
+/* rotatezoomout Start */
+#slider_container_innerMagicWidget42_ey.rotatezoomout_innerMagicWidget42_ey .gridwrapper_div > div{ 
+background-size: cover ;
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#slider_container_innerMagicWidget42_ey.rotatezoomout_innerMagicWidget42_ey .gridwrapper_div > div:hover { 
+    -webkit-transform: rotate(15deg) scale(1.8);
+    transform: rotate(15deg) scale(1.8);
+}
+/* rotatezoomout End */
+
+/* focus Start */
+#slider_container_innerMagicWidget42_ey.focus_innerMagicWidget42_ey .gridwrapper_div > div{ 
+background-size: cover ;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#slider_container_innerMagicWidget42_ey.focus_innerMagicWidget42_ey .gridwrapper_div > div:hover { 
+    -webkit-filter: blur(0);
+    filter: blur(0);
+}
+/* focus End */
+
+/* blur Start */
+#slider_container_innerMagicWidget42_ey.blur_innerMagicWidget42_ey .gridwrapper_div > div{ 
+background-size: cover ;
+    -webkit-filter: blur(0);
+    -ms-filter: blur(0);
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    filter: blur(0);
+    -webkit-transform:scale(1.07);
+    -ms-transform:scale(1.07);
+    -moz-transform:scale(1.07);
+    -o-transform:scale(1.07);
+    transform:scale(1.07);
+}
+
+#slider_container_innerMagicWidget42_ey.blur_innerMagicWidget42_ey .gridwrapper_div > div:hover { 
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+/* blur  End */
+
+/* grayscale Start */
+#slider_container_innerMagicWidget42_ey.grayscale_innerMagicWidget42_ey .gridwrapper_div > div{ 
+background-size: cover ;
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#slider_container_innerMagicWidget42_ey.grayscale_innerMagicWidget42_ey .gridwrapper_div > div:hover { 
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+/* grayscale End */
+
+/* grayscale out Start */
+#slider_container_innerMagicWidget42_ey.grayscaleout_innerMagicWidget42_ey .gridwrapper_div > div:first-child{ 
+background-size: cover ;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#slider_container_innerMagicWidget42_ey.grayscaleout_innerMagicWidget42_ey .gridwrapper_div > div:first-child:hover { 
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+/* grayscale out End */
+
+/* sepia Start */
+#slider_container_innerMagicWidget42_ey.sepia_innerMagicWidget42_ey .gridwrapper_div > div{ 
+background-size: cover ;
+    -webkit-filter: sepia(0);
+    filter: sepia(0);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#slider_container_innerMagicWidget42_ey.sepia_innerMagicWidget42_ey .gridwrapper_div > div:hover { 
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+}
+/* sepia End */
+
+/* sepia out Start */
+#slider_container_innerMagicWidget42_ey.sepiaout_innerMagicWidget42_ey .gridwrapper_div > div{ 
+background-size: cover ;
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#slider_container_innerMagicWidget42_ey.sepiaout_innerMagicWidget42_ey .gridwrapper_div > div:hover { 
+    -webkit-filter: sepia(0);
+    filter: sepia(0);
+}
+/* sepia out End */
+
+
+
+/* opacity Start */
+#slider_container_innerMagicWidget42_ey.opacity_innerMagicWidget42_ey .gridwrapper_div > div{ 
+background-size: cover ;
+    opacity: 1;
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#slider_container_innerMagicWidget42_ey.opacity_innerMagicWidget42_ey .gridwrapper_div > div:hover { 
+    opacity: .5;
+}
+/* opacity End */
+
+/* flash Start */
+#slider_container_innerMagicWidget42_ey.flash_innerMagicWidget42_ey .gridwrapper_div > div{ 
+background-size: cover ;
+}
+
+#slider_container_innerMagicWidget42_ey.flash_innerMagicWidget42_ey .gridwrapper_div > div:hover { 
+    opacity: 1;
+    -webkit-animation: flash 1s;
+    animation: flash 1s;
+}
+@-webkit-keyframes flash {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes flash {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* flash End */
+
+/* shine Start */
+#slider_container_innerMagicWidget42_ey.shine_innerMagicWidget42_ey .gridwrapper_div > div:first-child { 
+background-size: cover ;
+position: relative;
+}
+
+#slider_container_innerMagicWidget42_ey.shine_innerMagicWidget42_ey .gridwrapper_div > div::before  { 
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+#slider_container_innerMagicWidget42_ey.shine_innerMagicWidget42_ey .gridwrapper_div > div:hover::before {
+    -webkit-animation: shine 1s;
+    animation: shine 1s;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+}
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+/* shine End */
+
+.Title_CaptionGallery {
+    font-family: Arial;
+    font-weight: 700;
+    color: #fff;
+    font-size: 20px;
+    font-style: Normal;
+    text-transform: none;
+    text-decoration: none;
+    text-align: center;
+}
+.Description_CaptionGallery {
+    font-family: Arial;
+    font-weight: 400;
+    color: #fff;
+    font-size: 14px;
+    font-style: Normal;
+    text-transform: none;
+    text-decoration: none;
+    text-align: center;
+}   
+.galleryImageTitle_CaptionGallery_innerMagicWidget42_ey {
+    display: none;
+    position: relative;
+    pointer-events: none;
+    margin: 0px 0 0 0;
+
+}
+.galleryImageDescription_CaptionGallery_innerMagicWidget42_ey{
+    display: none;    
+    position: relative;
+    pointer-events: none;
+    margin: 5px 0 0 0;
+
+}
+
+.textbg_innerMagicWidget42_ey {
+    height: auto !important;
+    width: auto !important;
+    pointer-events: none;
+    top: 10%;
+    bottom: 10%;
+    right: 10%;
+    left: 10%;
+    border: solid 1px #fff;
+    border: none !important;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+}
+
+.bgcolor_innerMagicWidget42_ey {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    background-color: #000;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+}
+
+.center_innerMagicWidget42_ey {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    width: 95%;
+    transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+
+.landscape-columns_innerMagicWidget42_ey{
+	width: 100% !important;
+}
+
+.portrait-columns_innerMagicWidget42_ey{
+	width: 100% !important;
+}
+
+.tablet-columns_innerMagicWidget42_ey{
+	width: % !important;
+}
+
+ </style> 
+
+  
+
+
+<script>    
+
+
+
+/* Declare a function - click mouse navigators */
+
+
+function addEventsinnerMagicWidget42_ey(){ 
+
+
+
+    /* mouse click arrows */
+
+    /* right click */
+
+                $(".rightArrow > img").on("click", function(){
+
+                    var $imagesinnerMagicWidget42_ey = $("#slider_container_innerMagicWidget42_ey .gridwrapper_div div:first-child"); /* setting $imagesinnerMagicWidget42_ey as array of images divs */
+                    var imageSrc = $(".imagepopup_inner > img").attr("src"); /* setting imageSrc as image url */
+                    imageSrc = imageSrc.substr(imageSrc.lastIndexOf('index.html')+1); /* setting imageSrc as image url (as absolute path) */
+                    imageSrc = imageSrc.replace(/"/g, '');
+                    if(imageSrc.lastIndexOf('_')>-1){ /* if the last underscore exists */
+                        imageSrc = imageSrc.substr(0,imageSrc.lastIndexOf('_')); /* keep only the path without the underscore and what's next */
+                    }
+                    var index=0; /* setting index as 0 */
+                    var founded_innerMagicWidget42_ey = false; /* setting a flag to false */
+                    for (index=0; index<$imagesinnerMagicWidget42_ey.length; index++){ /* a loop that going throw all the images divs in the array */
+                        var currentImage = $imagesinnerMagicWidget42_ey[index].style.backgroundImage; /* setting currentImage as background images style (URL) of that index */
+                        currentImage = currentImage.substr(currentImage.lastIndexOf('index.html')+1); /* setting currentImage as image url (as absolute path) */
+                        currentImage = currentImage.replace(/"/g, '');
+                        if(currentImage.lastIndexOf('_')>-1){ /* if the last underscore exists */
+                            currentImage = currentImage.substr(0,currentImage.lastIndexOf('_')); /* keep only the path without the underscore and what's next */
+                        } else {
+                            currentImage = currentImage.substr(0,currentImage.length-1);
+                        }
+
+                        if (currentImage == imageSrc) { /* if we got in the loop to our image */
+                            founded_innerMagicWidget42_ey = true; /* flag turn true */
+                            break; /* and we jumping out of the loop (and going to if flag true condition - the next line) */
+                        }
+                    }
+
+                    if (founded_innerMagicWidget42_ey) { /* If the flag is set to true */
+
+
+                        var nextImage;
+                        if(index == $imagesinnerMagicWidget42_ey.length-1){
+                                nextImage = $imagesinnerMagicWidget42_ey[0].style.backgroundImage;
+                            } else {
+                                nextImage = $imagesinnerMagicWidget42_ey[index + 1].style.backgroundImage; 
+                            }
+
+                            nextImage = nextImage.replace(/"/g, '');
+                            if(nextImage.lastIndexOf('_')>-1){
+                                nextImage = nextImage.substr(4, nextImage.lastIndexOf('_')-4); 
+                            } else {
+                                nextImage = nextImage.substr(4, nextImage.length-5); 
+                            }
+
+
+                            if(index == $imagesinnerMagicWidget42_ey.length-1){
+                                PopUpImageResize(nextImage, $imagesinnerMagicWidget42_ey[0].getAttribute('title'));
+                            } else {
+                                PopUpImageResize(nextImage, $imagesinnerMagicWidget42_ey[index + 1].getAttribute('title'));
+                            }
+                        }
+                });
+
+
+                /* left click */
+
+
+                $(".leftArrow > img").on("click", function(){
+
+                    var $imagesinnerMagicWidget42_ey = $("#slider_container_innerMagicWidget42_ey .gridwrapper_div div:first-child"); /* setting $imagesinnerMagicWidget42_ey as array of images divs */
+                    var imageSrc = $(".imagepopup_inner > img").attr("src"); /* setting imageSrc as image url */
+                    imageSrc = imageSrc.substr(imageSrc.lastIndexOf('index.html')+1); /* setting imageSrc as image url (as absolute path) */
+                    imageSrc = imageSrc.replace(/"/g, '');
+                    if(imageSrc.lastIndexOf('_')>-1){ /* if the last underscore exists */
+                        imageSrc = imageSrc.substr(0,imageSrc.lastIndexOf('_')); /* keep only the path without the underscore and what's next */
+                    }
+                    var index=0; /* setting index as 0 */
+                    var founded_innerMagicWidget42_ey = false; /* setting a flag to false */
+                    for (index=0; index<$imagesinnerMagicWidget42_ey.length; index++){ /* a loop that going throw all the images divs in the array  */
+                        var currentImage = $imagesinnerMagicWidget42_ey[index].style.backgroundImage; /* setting currentImage as background images style (URL) of that index */
+                        currentImage = currentImage.substr(currentImage.lastIndexOf('index.html')+1); /* setting currentImage as image url (as absolute path) */
+                        currentImage = currentImage.replace(/"/g, '');
+                        if(currentImage.lastIndexOf('_')>-1){ /* if the last underscore exists */
+                            currentImage = currentImage.substr(0,currentImage.lastIndexOf('_')); /* keep only the path without the underscore and what's next */
+                        } else {
+                            currentImage = currentImage.substr(0,currentImage.length-1);
+                        }
+
+
+                        if (currentImage == imageSrc) { /* if we got in the loop to our image */
+                            founded_innerMagicWidget42_ey = true; /* flag turn true */
+                            break; /* and we jumping out of the loop (and going to if flag true condition - the next line) */
+                        }
+                    }
+
+
+                     if (founded_innerMagicWidget42_ey) { /* If the flag is set to true */
+                        var prevImage;
+                        if(index == 0){
+                            prevImage = $imagesinnerMagicWidget42_ey[$imagesinnerMagicWidget42_ey.length-1].style.backgroundImage;
+                        } else {
+                            prevImage = $imagesinnerMagicWidget42_ey[index - 1].style.backgroundImage; /* setting prevImage to the prev image URL in the array */
+                        }
+
+                        prevImage = prevImage.replace(/"/g, '');
+                        if(prevImage.lastIndexOf('_')>-1){
+                                prevImage = prevImage.substr(4, prevImage.lastIndexOf('_')-4); 
+                            } else {
+                                prevImage = prevImage.substr(4, prevImage.length-5); 
+                            }
+
+                       //$(".imagepopup_inner > img").attr("src", prevImage); /* setting the the src of the .imagepopup_inner image to prevImage */
+                        
+                        if(index == 0){
+                                PopUpImageResize(prevImage, $imagesinnerMagicWidget42_ey[$imagesinnerMagicWidget42_ey.length-1].getAttribute('title'));
+                        } else {
+                                PopUpImageResize(prevImage, $imagesinnerMagicWidget42_ey[index - 1].getAttribute('title'));
+                        }
+                    }
+                });
+
+
+
+
+         
+            }
+
+
+
+
+            /* catching the trigger after mading the pop-ups of images from utils.js */
+
+        var chatchingTrigger = {length: 1};
+        $(chatchingTrigger).on( 'trigger_innerMagicWidget42_ey',function(){
+            addEventsinnerMagicWidget42_ey(); 
+            });
+
+            
+
+      jQuery(document).ready(function ($) {   
+
+
+          var data_images = [{"src":"http://images8.webydo.com/92/9226611/3958/BC947042-0020-9210-2671-92E52EA9E27B.jpg","originalWidth":1498,"originalHeight":780,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/BC947042-0020-9210-2671-92E52EA9E27B.jpg","title":"","description":"","href":{"linktype":3,"value":"popup"}},{"src":"http://images8.webydo.com/92/9226611/3958/B444F8F4-DA5D-7999-2183-AF0F75549CD8.jpg","originalWidth":1500,"originalHeight":780,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/B444F8F4-DA5D-7999-2183-AF0F75549CD8.jpg","title":"","description":"","href":{"linktype":3,"value":"popup"}},{"src":"http://images8.webydo.com/92/9226611/3958/10165994-3020-AE49-AE51-74C0D8EA0685.jpg","originalWidth":1500,"originalHeight":780,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/10165994-3020-AE49-AE51-74C0D8EA0685.jpg","title":"","description":"","href":{"linktype":3,"value":"popup"}},{"src":"http://images8.webydo.com/92/9226611/3958/FDD59F9D-A4C4-E987-0BB2-448F8F78522F.jpg","originalWidth":1500,"originalHeight":780,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/FDD59F9D-A4C4-E987-0BB2-448F8F78522F.jpg","title":"","description":"","href":{"linktype":3,"value":"popup"}},{"src":"http://images8.webydo.com/92/9226611/3958/E290105A-413A-8C6F-2DCA-CFB61D99BC34.jpg","originalWidth":1500,"originalHeight":780,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/E290105A-413A-8C6F-2DCA-CFB61D99BC34.jpg","title":"","description":"","href":{"linktype":3,"value":"popup"}},{"src":"http://images8.webydo.com/92/9226611/3958/60B6D62D-2272-DF44-5668-9352A69119B4.jpg","originalWidth":1500,"originalHeight":780,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/60B6D62D-2272-DF44-5668-9352A69119B4.jpg","title":"","description":"","href":{"linktype":3,"value":"popup"}}];         
+          var sitePages = JSON.parse('{}');         
+          for (var i = 0; i < data_images.length; i++) {             
+              var json = data_images[i];              
+              
+              var imageWidthInPixels;
+              if (parent && parent.ISSTUDIO) {
+                  imageWidthInPixels = 1570 * 50 / 100;
+
+              } else {
+                  var classOfWidget = "innerMagicWidget42_ey";
+                  classOfWidget = classOfWidget.substring(0, classOfWidget.lastIndexOf('_'));
+                  if($("."+classOfWidget ).hasClass("fit_to_bg_new")){
+                      imageWidthInPixels = $(window).width() / (100/50) ;
+                  } else {
+                      imageWidthInPixels = $("."+classOfWidget).width() / (100/50) ;
+                  }
+              }
+
+              var step = SetImageOptimization(json.src, json.originalWidth, json.originalHeight,"innerMagicWidget42_ey",imageWidthInPixels,500);             var suffix = '';             if (step != -1) {                 suffix = '_' + step;             }              switch (json.href.linktype) {                 case 1:                     $("#slider_container_innerMagicWidget42_ey").append('<div  class="gridwrapper_div"><div title="'+json.title+'" onclick="widgets_linkToPage(\'' + sitePages[json.href.value] + '\')" style="cursor:pointer; background-image: url(\'' + json.src+suffix + '\')"></div><div class="textbg_innerMagicWidget42_ey"><span class="bgcolor_innerMagicWidget42_ey"></span><div class="center_innerMagicWidget42_ey"><p class="galleryImageTitle_CaptionGallery_innerMagicWidget42_ey Title_CaptionGallery">'+json.title+'</p><p class="galleryImageDescription_CaptionGallery_innerMagicWidget42_ey Description_CaptionGallery">'+json.description+'</p></div></div>');                     break;                 case 2:                     $("#slider_container_innerMagicWidget42_ey").append('<div class="gridwrapper_div"><div title="'+json.title+'" onclick="widgets_linkToUrl(\'' + json.href.value + '\')" style="cursor:pointer; background-image: url(\'' + json.src+suffix + '\')"></div><div class="textbg_innerMagicWidget42_ey"><span class="bgcolor_innerMagicWidget42_ey"></span><div class="center_innerMagicWidget42_ey"><p class="galleryImageTitle_CaptionGallery_innerMagicWidget42_ey Title_CaptionGallery">'+json.title+'</p><p class="galleryImageDescription_CaptionGallery_innerMagicWidget42_ey Description_CaptionGallery">'+json.description+'</p></div></div>');                     break;                 case 3:                     $("#slider_container_innerMagicWidget42_ey").append('<div  class="gridwrapper_div"><div title="'+json.title+'" onclick="widgets_PopUpImage(\'' + json.src + '\',\'' + json.title + '\',true,\'trigger_innerMagicWidget42_ey\')" style="cursor:pointer; background-image: url(\'' + json.src+suffix + '\')"></div><div class="textbg_innerMagicWidget42_ey"><span class="bgcolor_innerMagicWidget42_ey"></span><div class="center_innerMagicWidget42_ey"><p class="galleryImageTitle_CaptionGallery_innerMagicWidget42_ey Title_CaptionGallery">'+json.title+'</p><p class="galleryImageDescription_CaptionGallery_innerMagicWidget42_ey Description_CaptionGallery">'+json.description+'</p></div></div>');                     break;                 case 4:                     if (json.href.value) {                         $("#slider_container_innerMagicWidget42_ey").append('<div  class="gridwrapper_div"><div title="' + json.title + '" onclick="widgets_scrollToElement(event,\'' + json.href.value.replace('_', '') + '\')" style="cursor:pointer; background-image: url(\'' + json.src+suffix + '\')"></div><div class="textbg_innerMagicWidget42_ey"><span class="bgcolor_innerMagicWidget42_ey"></span><div class="center_innerMagicWidget42_ey"><p class="galleryImageTitle_CaptionGallery_innerMagicWidget42_ey Title_CaptionGallery">'+json.title+'</p><p class="galleryImageDescription_CaptionGallery_innerMagicWidget42_ey Description_CaptionGallery">'+json.description+'</p></div></div>');                     }else{                         $("#slider_container_innerMagicWidget42_ey").append('<div  class="gridwrapper_div"><div title="'+json.title+'" style="background-image: url(\'' + json.src+suffix + '\')"></div><div class="textbg_innerMagicWidget42_ey"><span class="bgcolor_innerMagicWidget42_ey"></span><div class="center_innerMagicWidget42_ey"><p class="galleryImageTitle_CaptionGallery_innerMagicWidget42_ey Title_CaptionGallery">'+json.title+'</p><p class="galleryImageDescription_CaptionGallery_innerMagicWidget42_ey Description_CaptionGallery">'+json.description+'</p></div></div>');                     }                     break;                 default:                     $("#slider_container_innerMagicWidget42_ey").append('<div  class="gridwrapper_div"><div title="'+json.title+'" style="background-image: url(\'' + json.src+suffix + '\')"></div><div class="textbg_innerMagicWidget42_ey"><span class="bgcolor_innerMagicWidget42_ey"></span><div class="center_innerMagicWidget42_ey"><p class="galleryImageTitle_CaptionGallery_innerMagicWidget42_ey Title_CaptionGallery">'+json.title+'</p><p class="galleryImageDescription_CaptionGallery_innerMagicWidget42_ey Description_CaptionGallery">'+json.description+'</p></div></div>');                     break;             }         }     }); </script>
+
+
+
+
+
+<script>
+$(window).on("mediaQueriesChange", function() {
+        fixWidgetAccordingToMediaQuery_innerMagicWidget42_ey();
+    });
+
+    $(window).on("windowResize", function() {
+        fixWidgetAccordingToMediaQuery_innerMagicWidget42_ey();
+    });
+    $(document).ready(function(){
+        fixWidgetAccordingToMediaQuery_innerMagicWidget42_ey();
+    });
+
+/* setting the widget media query option - to set differently the columns of the gallery to every breakPoint */
+	
+    function fixWidgetAccordingToMediaQuery_innerMagicWidget42_ey(){      
+// for Studio case:	
+            if (parent && parent.ISSTUDIO) {
+			// if portrait case:
+                if (1570 < 479){
+                     $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("tablet-columns_innerMagicWidget42_ey");
+                    $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("landscape-columns_innerMagicWidget42_ey");
+                    $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").addClass("portrait-columns_innerMagicWidget42_ey");
+					
+			// if landscape case:
+                } else if (1570 < 760 && 1570 > 479){
+				    $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("portrait-columns_innerMagicWidget42_ey");
+                    $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("tablet-columns_innerMagicWidget42_ey");
+                    $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").addClass("landscape-columns_innerMagicWidget42_ey");
+					
+			// if tablet case:
+                } else if (1570 < 960 && 1570 > 760){
+				    $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("portrait-columns_innerMagicWidget42_ey");
+                    $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("landscape-columns_innerMagicWidget42_ey");
+                     $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").addClass("tablet-columns_innerMagicWidget42_ey");
+					 
+			// else - desktop case:
+                } else {
+                     $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("portrait-columns_innerMagicWidget42_ey");
+                     $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("landscape-columns_innerMagicWidget42_ey");
+                     $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("tablet-columns_innerMagicWidget42_ey");
+                }
+				
+// for Publish case:	
+            } else {
+			// if portrait case:
+				if($("#slider_container_innerMagicWidget42_ey .gridwrapper_div").parent().width() < 479){
+					$("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("landscape-columns_innerMagicWidget42_ey");
+					$("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("tablet-columns_innerMagicWidget42_ey");
+					$("#slider_container_innerMagicWidget42_ey .gridwrapper_div").addClass("portrait-columns_innerMagicWidget42_ey");
+					
+			// if landscape case:
+                } else if ($("#slider_container_innerMagicWidget42_ey .gridwrapper_div").parent().width() < 760 && $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").parent().width() > 479){
+					$("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("portrait-columns_innerMagicWidget42_ey");
+					$("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("tablet-columns_innerMagicWidget42_ey");
+                    $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").addClass("landscape-columns_innerMagicWidget42_ey");
+			
+			// if tablet case:
+                } else if ($("#slider_container_innerMagicWidget42_ey .gridwrapper_div").parent().width() < 960 && $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").parent().width() > 760){
+                    $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("portrait-columns_innerMagicWidget42_ey");
+                    $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("landscape-columns_innerMagicWidget42_ey");	
+					$("#slider_container_innerMagicWidget42_ey .gridwrapper_div").addClass("tablet-columns_innerMagicWidget42_ey");
+					
+			// if desktop case:
+                } else {
+                    $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("portrait-columns_innerMagicWidget42_ey");
+                    $("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("landscape-columns_innerMagicWidget42_ey");
+					$("#slider_container_innerMagicWidget42_ey .gridwrapper_div").removeClass("tablet-columns_innerMagicWidget42_ey");
+                }
+    		}
+    }
+
+</script><style>
+    body {
+        margin: 0;
+    }
+
+    div#slides_ {
+        padding: 0 !important;
+    }
+</style>
+
+
+
+
+<script>
+
+    jQuery(document).ready(function ($) {
+
+        /* Declare a function - click mouse navigators */
+
+        function addEventsinnerMagicWidget45_ey(){
+
+
+
+    /* mouse click arrows */
+
+    /* right click */
+
+                $(".rightArrow > img").on("click", function(){
+
+                    var $imagesinnerMagicWidget45_ey = $("#slider_container_innerMagicWidget45_ey .nav_innerMagicWidget45_ey"); /* setting $imagesinnerMagicWidget45_ey as array of images divs */
+                    var $titlesinnerMagicWidget45_ey = $(".galleryImageTitle_innerMagicWidget45_ey");
+                    var imageSrc = $(".imagepopup_inner > img").attr("src"); /* setting imageSrc as image url */
+                    imageSrc = imageSrc.substr(imageSrc.lastIndexOf('index.html')+1); /* setting imageSrc as image url (as absolute path) */
+                    imageSrc = imageSrc.replace(/"/g, '');
+                    if(imageSrc.lastIndexOf('_')>-1){ /* if the last underscore exists */
+                        imageSrc = imageSrc.substr(0,imageSrc.lastIndexOf('_')); /* keep only the path without the underscore and what's next */
+                    }
+                    var index=0; /* setting index as 0 */
+                    var founded_innerMagicWidget45_ey = false; /* setting a flag to false */
+                    for (index=0; index<$imagesinnerMagicWidget45_ey.length; index++){ /* a loop that going throw all the images divs in the array */
+                        var currentImage = $imagesinnerMagicWidget45_ey[index].src; /* setting currentImage as background images style (URL) of that index */
+                        currentImage = currentImage.substr(currentImage.lastIndexOf('index.html')+1); /* setting currentImage as image url (as absolute path) */
+                        currentImage = currentImage.replace(/"/g, '');
+                        if(currentImage.lastIndexOf('_')>-1){ /* if the last underscore exists */
+                            currentImage = currentImage.substr(0,currentImage.lastIndexOf('_')); /* keep only the path without the underscore and what's next */
+                        } else if(currentImage.lastIndexOf(')')>-1) {
+                            currentImage = currentImage.substr(0,currentImage.length-1);
+                        }
+
+                        if (currentImage == imageSrc) { /* if we got in the loop to our image */
+                            founded_innerMagicWidget45_ey = true; /* flag turn true */
+                            break; /* and we jumping out of the loop (and going to if flag true condition - the next line) */
+                        }
+                    }
+
+    if (founded_innerMagicWidget45_ey) { /* If the flag is set to true */
+                        var nextImage;
+    if(index == $imagesinnerMagicWidget45_ey.length-1){
+        nextImage = $imagesinnerMagicWidget45_ey[0].src;
+    } else {
+                                nextImage = $imagesinnerMagicWidget45_ey[index + 1].src;
+    }
+
+    nextImage = nextImage.replace(/"/g, '');
+    if(nextImage.lastIndexOf('_')>-1){
+        nextImage = nextImage.substr(0, nextImage.lastIndexOf('_'));
+    } else if(currentImage.lastIndexOf(')')>-1) {
+        nextImage = nextImage.substr(0, nextImage.length-5);
+    }
+
+    //$(".imagepopup_inner > img").attr("src", nextImage);
+
+    if(index == $imagesinnerMagicWidget45_ey.length-1){
+        PopUpImageResize(nextImage, $(window).find($titlesinnerMagicWidget45_ey[0]).text());
+    } else {
+        PopUpImageResize(nextImage, $(window).find($titlesinnerMagicWidget45_ey[index+1]).text());
+    }
+    }
+    });
+
+
+    /* left click */
+
+
+    $(".leftArrow > img").on("click", function(){
+
+        var $imagesinnerMagicWidget45_ey = $("#slider_container_innerMagicWidget45_ey .nav_innerMagicWidget45_ey"); /* setting $imagesinnerMagicWidget45_ey as array of images divs */
+        var $titlesinnerMagicWidget45_ey = $(".galleryImageTitle_innerMagicWidget45_ey");
+        var imageSrc = $(".imagepopup_inner > img").attr("src"); /* setting imageSrc as image url */
+        imageSrc = imageSrc.substr(imageSrc.lastIndexOf('index.html')+1); /* setting imageSrc as image url (as absolute path) */
+        imageSrc = imageSrc.replace(/"/g, '');
+        if(imageSrc.lastIndexOf('_')>-1){ /* if the last underscore exists */
+            imageSrc = imageSrc.substr(0,imageSrc.lastIndexOf('_')); /* keep only the path without the underscore and what's next */
+        }
+        var index=0; /* setting index as 0 */
+        var founded_innerMagicWidget45_ey = false; /* setting a flag to false */
+        for (index=0; index<$imagesinnerMagicWidget45_ey.length; index++){ /* a loop that going throw all the images divs in the array  */
+            var currentImage = $imagesinnerMagicWidget45_ey[index].src; /* setting currentImage as background images style (URL) of that index */
+            currentImage = currentImage.substr(currentImage.lastIndexOf('index.html')+1); /* setting currentImage as image url (as absolute path) */
+            currentImage = currentImage.replace(/"/g, '');
+            if(currentImage.lastIndexOf('_')>-1){ /* if the last underscore exists */
+                currentImage = currentImage.substr(0,currentImage.lastIndexOf('_')); /* keep only the path without the underscore and what's next */
+            } else if(currentImage.lastIndexOf(')')>-1) {
+                currentImage = currentImage.substr(0,currentImage.length-1);
+            }
+
+            if (currentImage == imageSrc) { /* if we got in the loop to our image */
+                founded_innerMagicWidget45_ey = true; /* flag turn true */
+                break; /* and we jumping out of the loop (and going to if flag true condition - the next line) */
+            }
+        }
+
+
+    if (founded_innerMagicWidget45_ey) { /* If the flag is set to true */
+                        var prevImage;
+    if(index == 0){
+        prevImage = $imagesinnerMagicWidget45_ey[$imagesinnerMagicWidget45_ey.length-1].src;
+    } else {
+        prevImage = $imagesinnerMagicWidget45_ey[index - 1].src; /* setting prevImage to the prev image URL in the array */
+    }
+
+    prevImage = prevImage.replace(/"/g, '');
+    if(prevImage.lastIndexOf('_')>-1){
+        prevImage = prevImage.substr(0, prevImage.lastIndexOf('_'));
+    } else if(currentImage.lastIndexOf(')')>-1) {
+        prevImage = prevImage.substr(0, prevImage.length-5);
+    }
+
+    // $(".imagepopup_inner > img").attr("src", prevImage); /* setting the the src of the .imagepopup_inner image to prevImage */
+
+    if(index == 0){
+        PopUpImageResize(prevImage, $(window).find($titlesinnerMagicWidget45_ey[$titlesinnerMagicWidget45_ey.length-1]).text());
+    } else {
+        PopUpImageResize(prevImage, $(window).find($titlesinnerMagicWidget45_ey[index-1]).text());
+    }
+    }
+    });
+
+
+
+
+
+    }
+
+
+
+
+    /* catching the trigger after mading the pop-ups of images from utils.js */
+
+    var chatchingTrigger = {length: 1};
+    $(chatchingTrigger).bind( 'trigger_innerMagicWidget45_ey',function(){
+        addEventsinnerMagicWidget45_ey();
+    });
+    });
+
+
+</script>
+
+
+
+
+<script>
+
+    body_str_innerMagicWidget45_ey = "";
+
+    function widgetLoaded_innerMagicWidget45_ey() {
+        body_str_innerMagicWidget45_ey = $(document.getElementById("slider_container_innerMagicWidget45_ey").parentNode).html();
+        fixWidgetAccordingToMediaQuery_innerMagicWidget45_ey('innerMagicWidget45_ey');
+    }
+
+    function rebuildWidget_innerMagicWidget45_ey(){
+        var data_images = [{"src":"http://images8.webydo.com/92/9226611/3958/A2ED579B-8627-7704-D951-F8B1AC9813BA.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/A2ED579B-8627-7704-D951-F8B1AC9813BA.jpg","title":"Food & Drinks","description":"","href":{"linktype":1,"value":"2807540"}},{"src":"http://images8.webydo.com/92/9226611/3958/50F592F7-CFA6-E51E-F148-7D2BEC832059.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/50F592F7-CFA6-E51E-F148-7D2BEC832059.jpg","title":"City life","description":"","href":{"linktype":1,"value":"2807523"}},{"src":"http://images8.webydo.com/92/9226611/3958/BD24E4CE-E159-B292-9D45-B9EA77C141E2.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/BD24E4CE-E159-B292-9D45-B9EA77C141E2.jpg","title":"people","description":"","href":{"linktype":1,"value":"2807009"}},{"src":"http://images8.webydo.com/92/9226611/3958/35DA62BF-DD61-37BA-403F-E523FEB07BBE.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/35DA62BF-DD61-37BA-403F-E523FEB07BBE.jpg","title":"on the road","description":"","href":{"linktype":1,"value":"2807539"}},{"src":"http://images8.webydo.com/92/9226611/3958/69877D7E-AFEA-A7C2-F755-EC2201041344.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/69877D7E-AFEA-A7C2-F755-EC2201041344.jpg","title":"by the sea","description":"","href":{"linktype":1,"value":"2807527"}},{"src":"http://images8.webydo.com/92/9226611/3958/62880BA3-5B16-F7D4-7EDC-FD0A9552D131.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/62880BA3-5B16-F7D4-7EDC-FD0A9552D131.jpg","title":"winter is coming","description":"","href":{"linktype":1,"value":"455768"}},{"src":"http://images8.webydo.com/92/9226611/3958/429DD8B0-7E3F-F293-CF73-984ADA5052AD.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/429DD8B0-7E3F-F293-CF73-984ADA5052AD.jpg","title":"wedding bells","description":"","href":{"linktype":1,"value":"2805705"}},{"src":"http://images8.webydo.com/92/9226611/3958/D623DF5D-13A0-3667-2742-E387103B86C2.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/D623DF5D-13A0-3667-2742-E387103B86C2.jpg","title":"architecture","description":"","href":{"linktype":1,"value":"2807036"}}];
+        var sitePages = JSON.parse('{"2807540":"fooddrink.html","2807523":"citylife.html","2807009":"people.html","2807539":"ontheroad.html","2807527":"bythesea.html","455768":"winteriscoming.html","2805705":"magazinelayout.html","2807036":"splitgrid.html"}');
+        var resHtml = "";
+        var displayPieces = Math.floor((1570 - 0) / (200 + 0));
+
+        if(data_images.length == 1) {
+            displayPieces = displayPieces * 10;
+        }
+
+        var containerWidth = document.getElementById("slider_container_innerMagicWidget45_ey").style.width;
+        var containerHeight = document.getElementById("slider_container_innerMagicWidget45_ey").style.height;
+
+        for (var j = 0; j <= displayPieces; j++) {
+            for (var i = 0; i < data_images.length; i++) {
+                var json = data_images[i];
+                var step = SetImageOptimization(json.src, json.originalWidth, json.originalHeight,"innerMagicWidget45_ey", containerWidth, containerHeight);
+                var suffix = '';
+                if (step != -1) {
+                    suffix = '_' + step;
+                }
+
+                resHtml += '<div>';
+                switch (json.href.linktype) {
+
+                    case 1:
+                        resHtml += '<img u="image" class="nav_innerMagicWidget45_ey" onclick="widgets_linkToPage(\'' + sitePages[json.href.value] + '\')" src="' + json.src+suffix + '" style="cursor: pointer;" />';
+                        break;
+                    case 2:
+                        resHtml += '<img u="image" class="nav_innerMagicWidget45_ey" onclick="widgets_linkToUrl(\'' + json.href.value + '\')" src="' + json.src+suffix + '" style="cursor: pointer;" />';
+                        break;
+                    case 3:
+                        resHtml += '<img u="image" class="nav_innerMagicWidget45_ey" onclick="widgets_PopUpImage(\'' + json.src + '\',\'' + json.title + '\', true, \'trigger_innerMagicWidget45_ey\' )" src="' + json.src+suffix + '" style="cursor: pointer;" />';
+                        break;
+                    case 4:
+                        if (json.href.value) {
+                            resHtml += '<img u="image" class="nav_innerMagicWidget45_ey" onclick="widgets_scrollToElement(event,\'' + json.href.value.replace('_', '') + '\')" src="' + json.src+suffix + '" style="cursor: pointer;" />';
+                        }else{
+                            resHtml += '<img u="image" src="' + json.src+suffix + '" />';
+                        }
+                        break;
+                    default:
+                        resHtml += '<img u="image" src="' + json.src+suffix + '" />';
+                        break;
+                }
+
+                resHtml += '</div>';
+            }
+        }
+
+        $('#slides_innerMagicWidget45_ey').append(resHtml);
+        var options = {
+            $AutoPlay: true,
+            $PauseOnHover: 0,
+            $AutoPlaySteps: 1,
+            $AutoPlayInterval: 0,
+            $ArrowKeyNavigation: false,
+            $SlideEasing: $JssorEasing$.$EaseLinear,
+            $SlideDuration: 30*1000,
+            $MinDragOffsetToSlide: 20,
+            $SlideWidth: 200,
+            $SlideHeight: 200,
+            $SlideSpacing: 0,
+            $PauseOnHover: 4,
+            $Cols: data_images.length * (displayPieces + 1) - 1,
+            $DragOrientation: 0
+        };
+
+        var jssor_slider = new $JssorSlider$("slider_container_innerMagicWidget45_ey", options);
+    }
+
+    $(window).bind("load", widgetLoaded_innerMagicWidget45_ey);
+
+    $(window).on( "mediaQueriesChange", function() {
+        fixWidgetAccordingToMediaQuery_innerMagicWidget45_ey('innerMagicWidget45_ey');
+    });
+
+    $(window).on( "orientationchange", function() {
+        fixWidgetAccordingToMediaQuery_innerMagicWidget45_ey('innerMagicWidget45_ey');
+    });
+
+    function fixWidgetAccordingToMediaQuery_innerMagicWidget45_ey(widgetUniqueId)     {
+        $(document.getElementById("slider_container_" + widgetUniqueId).parentNode).html(window["body_str_" + widgetUniqueId]);
+        document.getElementById("slider_container_"+widgetUniqueId).style.width = $(document.getElementById("slider_container_"+widgetUniqueId).parentNode).css('width');
+        document.getElementById("slider_container_"+widgetUniqueId).style.height = $(document.getElementById("slider_container_"+widgetUniqueId).parentNode).css('height');
+        document.getElementById("slides_"+widgetUniqueId).style.width = $(document.getElementById("slider_container_"+widgetUniqueId).parentNode).css('width');
+        document.getElementById("slides_"+widgetUniqueId).style.height = $(document.getElementById("slider_container_"+widgetUniqueId).parentNode).css('height');
+        window["rebuildWidget_" + widgetUniqueId]();
+    }
+
+</script>
+	<link rel="stylesheet" type="text/css" href="images/main3858.css?v=DplyPub_160801.5"/>
+	<link rel="stylesheet" type="text/css" href="images/alefhebrew.css"/>
+	<script src="images/skrollr3858.js?v=DplyPub_160801.5" type='text/javascript'></script>
+	<script src="images/script3858.js?v=DplyPub_160801.5" type='text/javascript'></script>
+
+
+
+
+</head>
+<body>
+
+<div id='skrollr-body'>
+<input type="hidden" class="bp_data" data-bp="portrait" data-value="320"  data-startsfrom="479" /><input type="hidden" class="bp_data" data-bp="landscape" data-value="480"  data-startsfrom="767" /><input type="hidden" class="bp_data" data-bp="tablet" data-value="768"  data-startsfrom="959" /><input type="hidden" class="bp_data" data-bp="pc" data-value="1170" /><div id='generalSitebackgroundDiv' class='generalSitebackgroundDiv'></div><div id='innerMainPanel0' class='innerMainPanel0'></div>	<div id='mainMainPanel0' class='dataTypeMainPanel mainMainPanel0' data-type='MainPanel'>
+
+	<div id='mainShape24__Shape24_Shape66584'   data-id='mainShape24' class='dataTypeShape  mainShape24    mainShape' data-type='Shape' ></div>
+
+		<header><div id='mainMainRow1' class='dataTypeMainRow mainMainRow1 ' data-type='MainRow'>
+			<div id='mainMainContent2' class='dataTypeMainContent mainMainContent2' data-type='MainContent'></div>
+		</div></header>
+		<main><div id='mainMainRow3' class='dataTypeMainRow mainMainRow3 ' data-type='MainRow'>
+			<div id='mainMainContent4' class='dataTypeMainContent mainMainContent4 ContentHeight' data-type='MainContent'>		<div id='innerMagicWidget42__MagicWidget42' data-widgetkey='703' data-id='innerMagicWidget42'  class='dataTypeMagicWidget innerMagicWidget42  fit_to_bg_new  ' data-type='MagicWidget'><div id="slider_container_innerMagicWidget42_ey" class="grayscaleout_innerMagicWidget42_ey shine_innerMagicWidget42_ey"></div></div>
+		<div id='innerShape43__Shape43'   data-id='innerShape43' class='dataTypeShape  innerShape43    ' data-type='Shape' ></div>
+		<div id='innerMagicWidget45__MagicWidget45_MagicWidget10850456' data-widgetkey='332' data-id='innerMagicWidget45'  class='dataTypeMagicWidget innerMagicWidget45  fit_to_bg_new  ' data-type='MagicWidget'><div id="slider_container_innerMagicWidget45_ey" style="position: relative; top: 0px; left: 0px;  width: 1570px; height: 199px; overflow: hidden; ">     <div u="slides" id="slides_innerMagicWidget45_ey" style="position: absolute; left: 0px; top: 0px;  width: 1570px; height: 199px; overflow: hidden;"></div> </div></div>
+		<div     id='innerText48__Text48_Text77440019' data-id='innerText48' style='' data-type="text" class='dataTypeText  inner_text innerText48   text_editor_resets' ><div  class='innerText48_ContentDiv'><h1 class="PageTitle ospfxwdfd4252d84ea22c639a5ec7734fd33c4ossfx">architecture</h1><h3 class="SubTitle2 ospfxwcf6820a2a77418090654c8508e872a4bossfx">2015 &nbsp;<img alt="" width="12" height="14" data-pin-nopin="true" src="images/2d8b2812-f8e2-c553-26db-940b1fdd104e.png" /> &nbsp;folowing the geometric line</h3><p class="Normal ospfxw688f10d2c300cea0be65a63e97056fe2ossfx">In nunc ex, ultrices sed ex nec, bibendum auctor odio. In sed risus vitae urna molestie egestas. Donec venenatis, eros ut consequat&nbsp;condimentum, arcu nullaonsequat tortor, non fermentum massa massa at mauris. Ut ultricies eros sed magna gravida, ac fermentum elipin ornare nunc. Nullam ut tortor eu nibh iaculis tinc</p><p class="Normal ospfxwb2ac06ded88c560b364d7ac2da4cb66dossfx">&nbsp;</p><p class="Normal ospfxwee4682fed2ad75286125d68ac06fa181ossfx"><img alt="" width="57" height="30" data-pin-nopin="true" src="images/bbbfe32d-433e-6642-b1b9-310fa9b4d202.png" /></p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+		<div     id='innerText49__Text49' data-id='innerText49' style='' data-type="text" class='dataTypeText  inner_text innerText49   text_editor_resets' ><div  class='innerText49_ContentDiv'><h6 class="Title-white ospfxw0a626c286c0b8c7b1c939fd0933cd7bfossfx">More of my work</h6><p class="Normal-italic-white ospfxwfcda6163301ae1f7af5d062091ff7741ossfx">Donec venenatis, eros ut consequat condimentum, arcu nulla consequat tortor.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+		<div id='innerShape46__Shape46'   data-id='innerShape46' class='dataTypeShape  innerShape46  fit_to_bg_new  ' data-type='Shape' ></div>
+
+				<div class='dataTypeMenu menu left horizontal mainMenu65 ' data-type='Menu' data-name='Menu1' id='mainMenu65'><nav>					<ul>
+						<li id='mainMenuElement0mainMenu65' data-pageName='Page2' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"fooddrink.html","false")'> <A href="fooddrink.html" title="FOOD & DRINKS" class="category" >FOOD & DRINKS</A></li>
+						<li id='mainMenuElement1mainMenu65' data-pageName='Page9' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"splitgrid.html","false")'> <A href="splitgrid.html" title="ARCHITECTURE" class="category" >ARCHITECTURE</A></li>
+						<li id='mainMenuElement2mainMenu65' data-pageName='Page4' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"people.html","false")'> <A href="people.html" title="PEOPLE" class="category" >PEOPLE</A></li>
+						<li id='mainMenuElement3mainMenu65' data-pageName='Page5' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"ontheroad.html","false")'> <A href="ontheroad.html" title="ON THE ROAD" class="category" >ON THE ROAD</A></li>
+						<li id='mainMenuElement4mainMenu65' data-pageName='Page6' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"bythesea.html","false")'> <A href="bythesea.html" title="BY THE SEA" class="category" >BY THE SEA</A></li>
+						<li id='mainMenuElement5mainMenu65' data-pageName='Page7' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"winteriscoming.html","false")'> <A href="winteriscoming.html" title="WINTER IS COMING" class="category" >WINTER IS COMING</A></li>
+						<li id='mainMenuElement6mainMenu65' data-pageName='Page8' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"magazinelayout.html","false")'> <A href="magazinelayout.html" title="WEDDING BELLS" class="category" >WEDDING BELLS</A></li>
+						<li id='mainMenuElement7mainMenu65' data-pageName='Page3' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"citylife.html","false")'> <A href="citylife.html" title="CITY LIFE" class="category" >CITY LIFE</A></li>
+					</ul>
+				</nav></div>
+				<div     id='mainText69__Text69_Text17984230' data-id='mainText69' style='' data-type="text" class='dataTypeText  inner_text mainText69   text_editor_resets' ><div  class='mainText69_ContentDiv'><p class="Normal-italic ospfxwb5e09ca59eefcfcab085705052f06206ossfx">View Albums</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div id='mainShape70__Shape70_Shape56268232'  data-reference='71' data-id='mainShape70' class='dataTypeShape  mainShape70     mobile-toggle' data-type='Shape' ></div>
+				<div class='dataTypeMenu menu left mobile mainMenu71 ' data-type='Menu' data-name='Menu1' id='mainMenu71'><nav>					<ul class="mobile-menu"><li class=""><li id="mainMenuMobElement0mainMenu71" data-pageName='Page2' class='mainMenu71_category image_wa' data-childmenu=""><A href="fooddrink.html" title="FOOD & DRINKS" class="category" >FOOD & DRINKS</A></li><li class=""><li id="mainMenuMobElement1mainMenu71" data-pageName='Page9' class='mainMenu71_category image_wa' data-childmenu=""><A href="splitgrid.html" title="ARCHITECTURE" class="category" >ARCHITECTURE</A></li><li class=""><li id="mainMenuMobElement2mainMenu71" data-pageName='Page4' class='mainMenu71_category image_wa' data-childmenu=""><A href="people.html" title="PEOPLE" class="category" >PEOPLE</A></li><li class=""><li id="mainMenuMobElement3mainMenu71" data-pageName='Page5' class='mainMenu71_category image_wa' data-childmenu=""><A href="ontheroad.html" title="ON THE ROAD" class="category" >ON THE ROAD</A></li><li class=""><li id="mainMenuMobElement4mainMenu71" data-pageName='Page6' class='mainMenu71_category image_wa' data-childmenu=""><A href="bythesea.html" title="BY THE SEA" class="category" >BY THE SEA</A></li><li class=""><li id="mainMenuMobElement5mainMenu71" data-pageName='Page7' class='mainMenu71_category image_wa' data-childmenu=""><A href="winteriscoming.html" title="WINTER IS COMING" class="category" >WINTER IS COMING</A></li><li class=""><li id="mainMenuMobElement6mainMenu71" data-pageName='Page8' class='mainMenu71_category image_wa' data-childmenu=""><A href="magazinelayout.html" title="WEDDING BELLS" class="category" >WEDDING BELLS</A></li><li class=""><li id="mainMenuMobElement7mainMenu71" data-pageName='Page3' class='mainMenu71_category image_wa' data-childmenu=""><A href="citylife.html" title="CITY LIFE" class="category" >CITY LIFE</A></li></ul>				</nav></div>
+			</div>
+		</div></main>
+		<footer><div id='mainMainRow5' class='dataTypeMainRow mainMainRow5 ' data-type='MainRow'>
+			<div id='mainMainContent6' class='dataTypeMainContent mainMainContent6' data-type='MainContent'>
+				<div id='mainShape29__Shape29_Shape44352142'   data-id='mainShape29' class='dataTypeShape  mainShape29  fit_to_bg_new  ' data-type='Shape' ></div>
+				<div     id='mainText40__Text40_Text7820415' data-id='mainText40' style='' data-type="text" class='dataTypeText  inner_text mainText40   text_editor_resets' ><div  class='mainText40_ContentDiv'><h6 class="Title-white ospfxw9cbdaefb2cda6773550f4f81400400d5ossfx">services</h6></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div     id='mainText41__Text41_Text24207917' data-id='mainText41' style='' data-type="text" class='dataTypeText  inner_text mainText41   text_editor_resets' ><div  class='mainText41_ContentDiv'><p class="Normal-italic-white ospfxw91707026d7b5ce09e35e2301c720ae82ossfx">Donec venenatis, eros ut consequat condimentum, arcu nulla consequat tortor, non fermentum massa massa at mauris. Ut ultricies eros sed magna gravida, ac fermentum elit ultrices.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div     id='mainText42__Text42_Text91667419' data-id='mainText42' style='' data-type="text" class='dataTypeText  inner_text mainText42   text_editor_resets' ><div  class='mainText42_ContentDiv'><h6 class="Title-white ospfxwd033bbd099d599089aa50efdc00ea0f8ossfx">let&#39;s talk</h6></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div     id='mainText43__Text43_Text168087321' data-id='mainText43' style='' data-type="text" class='dataTypeText  inner_text mainText43   text_editor_resets' ><div  class='mainText43_ContentDiv'><p class="Normal-italic-white ospfxwf364f7c918d4518aca509333638f2245ossfx">&nbsp;info@martioldfield.com<br>(&#43;192) - 304-888-192</p><p class="Normal-italic-white ospfxw0d762ac189b750585eff1e90decfd606ossfx">&nbsp;</p><p class="Normal-italic-white ospfxw4a6758b1de44d471bdbad5b08e0f454eossfx">Oranienburger Str. 82, 10128&nbsp;<br>Berlin, Germany.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div id='mainForm44' class='dataTypeForm mainForm44' data-type='Form' style="z-index:5;border-width:1px;border-color:transparent;border-style:none;box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 1);
+-moz-box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 1);
+-webkit-box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 1);
+position:absolute;overflow:hidden;">
+					<div id='mainShape45' class='dataTypeShape  submit_button mainShape45  ' data-type='Shape' data-formmode="FormMode"
+onClick='mainForm44_submit()' >
+						<div     id='mainText46__Text46_Text3207628' data-id='mainText46' style='' data-type="text" class='dataTypeText  inner_text mainText46   text_editor_resets' data-formmode="FormMode"
+><div  class='mainText46_ContentDiv'><h5 class="btn-white ospfxw5c821d6c91e01f26f40c39be4c5f51e7ossfx">sign up</h5></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+					</div>
+					<div id='mainGroup47' class='dataTypeGroup mainGroup47 ' data-type='Group'>
+						<div     id='mainText48__Text48_Text3272432' data-id='mainText48' style='' data-type="text" class='dataTypeText  inner_text mainText48   text_editor_resets' data-formmode="FormMode"
+><div  class='mainText48_ContentDiv'><p class="Normal-italic-white ospfxw3c280d0ccca619a8f149d3b31d52036eossfx">email</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+						<div class='dataTypeField mainField49' data-type='Field' data-mandatory="True"
+data-formmode="FormMode" 
+style='position:absolute;overflow:hidden;border-left-width:2px;border-right-width:2px;border-top-width:2px;border-bottom-width:2px;border-color:#FFFFFF;border-style:solid;'><input type='text' id='Field49_Field3312034' data-ph='' style='width:100%;height:100%;padding-top:0px;padding-bottom:0px;border:none;overflow:hidden;padding-left:60px;box-sizing:border-box;font-size:14px;font-family:serif;color:#FFFFFF;background-color:transparent;box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 1);
+-moz-box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 1);
+-webkit-box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 1);
+' onfocus="ResetValue(this,'')" onblur="ResetValue(this,'')" value=''></div>
+						<div     id='mainText50__Text50_Text3330036' data-id='mainText50' style='' data-type="text" class='dataTypeText  inner_text mainText50  none_important text_editor_resets' data-formmode="FormMode"
+data-etc="FormErrorMessage"
+><div  class='mainText50_ContentDiv'><p class="Normal-white ospfxw866c3379198d30c5bd483b33c05fe96aossfx">This field is required.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+					</div>
+					<div     id='mainText51__Text51_Text3376838' data-id='mainText51' style='' data-type="text" class='dataTypeText  inner_text mainText51  none_important text_editor_resets' data-formmode="MessageMode"
+><div  class='mainText51_ContentDiv'><h6 class="Title-white ospfxwbb30bb9c7887e79f217afe255b1bcd85ossfx">Thank You!</h6><p class="Normal-italic-white ospfxw27a3a0dac493d56ae5a0a5769be067c5ossfx">The form has been successfully sent.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+					<div     id='mainText52__Text52_Text3412840' data-id='mainText52' style='' data-type="text" class='dataTypeText  inner_text mainText52   text_editor_resets' data-formmode="FormMode"
+><div  class='mainText52_ContentDiv'><p class="Normal-italic-white ospfxwa4dbae13438b88dd0d4c3497bb973a47ossfx">Fill out your e-mail to get monthly updates:</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				</div>
+				<a href='index.html'><div id='mainImage60__Image60_Image4468811' data-id='mainImage60' data-type='Image' class='dataTypeImage  mainImage60   '><img data-image-fitting-type='3' data-image-position-type='' width="115" height="22"   style="position:absolute;width:115;height:22;left:0px;top:0px" alt="" title="Marti Oldfield" src="images/5cc242ab-046c-9c17-5bb0-f341398e7678.png"    ></div></a>
+				<div     id='mainText61__Text61_Text39916813' data-id='mainText61' style='' data-type="text" class='dataTypeText  inner_text mainText61   text_editor_resets' ><div  class='mainText61_ContentDiv'><p class="footer-text ospfxw7a2dd28d415dda564ad0fe5074bbea33ossfx">Professional photography</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div     id='mainText62__Text62_Text44179215' data-id='mainText62' style='' data-type="text" class='dataTypeText  inner_text mainText62   text_editor_resets' ><div  class='mainText62_ContentDiv'><p class="footer-text ospfxwa792f046902d837041caa4f5f15fde33ossfx">crafted using <a target="_blank" class="footer-text" href="http://www.webydo.com/" rel="nofollow">webydo</a>.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div class='dataTypeMenu menu left horizontal mainMenu63 ' data-type='Menu' data-name='Top Menu' id='mainMenu63'><nav>					<ul>
+						<li id='mainMenuElement0mainMenu63' data-pageName='Page1' class='mainMenu63_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "ul_mainMenu63_Page1")' onmouseout='javascript:MenuOut(this, event, "ul_mainMenu63_Page1")' data-childmenu='ul_mainMenu63_Page1' onclick='javascript:menuLiClick(this,event,"index-2.html","false")'> <A href="index-2.html" title="Work" class="category" >Work</A></li>
+						<li id='mainMenuElement1mainMenu63' data-pageName='pricing' class='mainMenu63_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"pricing.html","false")'> <A href="pricing.html" title="Pricing" class="category">Pricing</A></li>
+						<li id='mainMenuElement2mainMenu63' data-pageName='about' class='mainMenu63_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"about.html","false")'> <A href="about.html" title="About" class="category">About</A></li>
+						<li id='mainMenuElement3mainMenu63' data-pageName='contact' class='mainMenu63_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"contact.html","false")'> <A href="contact.html" title="Contact" class="category">Contact</A></li>
+					</ul>
+				</nav></div>
+				<div     id='mainText66__Text66_Text7696047' data-id='mainText66' style='' data-type="text" class='dataTypeText  inner_text mainText66   text_editor_resets' ><div  class='mainText66_ContentDiv'><h6 class="Title-white ospfxw1f8e83258094dbac8f4736f1a8f9c01bossfx">get my newsletter</h6></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+			</div>
+		</div></footer>
+		<div     id='mainText39__Text39_Text223860214' data-id='mainText39' style='' data-type="text" class='dataTypeText  inner_text mainText39   text_editor_resets' ><div  class='mainText39_ContentDiv'><p class="Normal-italic ospfxw269ed4ed964121e79bf94a0b302e597bossfx">follow me:&nbsp;</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+		<a href='http://instagram.com/' target='_blank'><div id='mainImage36__Image36_Image20160206' data-id='mainImage36' data-type='Image' class='dataTypeImage  mainImage36   '><img data-image-fitting-type='3' data-image-position-type='' width="14" height="14"   style="position:absolute;width:14;height:14;left:0px;top:0px" alt="Instagram" title="Instagram" src="images/c9572334-2ed4-6f23-812b-4711628aa199.png"    ></div></a>
+		<a href='https://www.linkedin.com/' target='_blank'><div id='mainImage37__Image37_Image33712208' data-id='mainImage37' data-type='Image' class='dataTypeImage  mainImage37   '><img data-image-fitting-type='3' data-image-position-type='' width="16" height="16"   style="position:absolute;width:16;height:16;left:0px;top:0px" alt="Linkedin" title="Linkedin" src="images/be4aec58-6194-48f5-61f4-13e7362b3c25.png"    ></div></a>
+		<a href='http://twitter.com/' target='_blank'><div id='mainImage38__Image38_Image758993212' data-id='mainImage38' data-type='Image' class='dataTypeImage  mainImage38   '><img data-image-fitting-type='3' data-image-position-type='' width="18" height="15"   style="position:absolute;width:18;height:15;left:0px;top:0px" alt="Twitter" title="Twitter" src="images/6dd5678d-b3f6-4df5-75b8-7520ecb936b2.png"    ></div></a>
+		<div class='dataTypeMenu menu left horizontal mainMenu26 ' data-type='Menu' data-name='Top Menu' id='mainMenu26'><nav>			<ul>
+				<li id='mainMenuElement0mainMenu26' data-pageName='Page1' class='mainMenu26_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "ul_mainMenu26_Page1")' onmouseout='javascript:MenuOut(this, event, "ul_mainMenu26_Page1")' data-childmenu='ul_mainMenu26_Page1' onclick='javascript:menuLiClick(this,event,"index-2.html","false")'> <A href="index-2.html" title="Work" class="category" >Work</A></li>
+				<li id='mainMenuElement1mainMenu26' data-pageName='pricing' class='mainMenu26_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"pricing.html","false")'> <A href="pricing.html" title="Pricing" class="category">Pricing</A></li>
+				<li id='mainMenuElement2mainMenu26' data-pageName='about' class='mainMenu26_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"about.html","false")'> <A href="about.html" title="About" class="category">About</A></li>
+				<li id='mainMenuElement3mainMenu26' data-pageName='contact' class='mainMenu26_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"contact.html","false")'> <A href="contact.html" title="Contact" class="category">Contact</A></li>
+			</ul>
+		</nav></div>
+		<div id='mainShape67__Shape67_Shape43911210'  data-reference='68' data-id='mainShape67' class='dataTypeShape  mainShape67     mobile-toggle' data-type='Shape' ></div>
+		<div class='dataTypeMenu menu right mobile mainMenu68 ' data-type='Menu' data-name='Top Menu' id='mainMenu68'><nav>			<ul class="mobile-menu"><li class=""><li id="mainMenuMobElement0mainMenu68" data-pageName='Page1' class='mainMenu68_category mobile-menu-parent mobile-rtl image_wa' data-childmenu="ul_mainMenu68_Page1"><A href="index-2.html" title="Work" class="category" >Work</A><button></button><ul class="mobile-menu-children x3"><li class=""><li id="mainMenuMobElement0mainMenu68" data-pageName='people' class='mainMenu68_submenu image_wa' data-childmenu=""><A href="people.html" title="Full width" class="category">Full width</A></li><li class=""><li id="mainMenuMobElement1mainMenu68" data-pageName='winteriscoming' class='mainMenu68_submenu image_wa' data-childmenu=""><A href="winteriscoming.html" title="Gallery with hero" class="category">Gallery with hero</A></li><li class=""><li id="mainMenuMobElement2mainMenu68" data-pageName='splitgrid' class='mainMenu68_submenu image_wa' data-childmenu=""><A href="splitgrid.html" title="Split Grid" class="category">Split Grid</A></li><li class=""><li id="mainMenuMobElement3mainMenu68" data-pageName='magazinelayout' class='mainMenu68_submenu image_wa' data-childmenu=""><A href="magazinelayout.html" title="Magazine layout" class="category">Magazine layout</A></li></ul></li><li class=""><li id="mainMenuMobElement1mainMenu68" data-pageName='pricing' class='mainMenu68_category image_wa' data-childmenu=""><A href="pricing.html" title="Pricing" class="category">Pricing</A></li><li class=""><li id="mainMenuMobElement2mainMenu68" data-pageName='about' class='mainMenu68_category image_wa' data-childmenu=""><A href="about.html" title="About" class="category">About</A></li><li class=""><li id="mainMenuMobElement3mainMenu68" data-pageName='contact' class='mainMenu68_category image_wa' data-childmenu=""><A href="contact.html" title="Contact" class="category">Contact</A></li></ul>		</nav></div>
+		<div id='mainShape74__Shape74_Shape45408991'   data-id='mainShape74' class='dataTypeShape  mainShape74  fit_to_bg_new  ' data-type='Shape' ></div>
+		<div     id='mainText77__Text77_Text4827901703' data-id='mainText77' style='' data-type="text" class='dataTypeText  inner_text mainText77   text_editor_resets' ><div  class='mainText77_ContentDiv'><h2 class="logo- ospfxw8346bdd75f4abdfb6362466f9e6c1ac5ossfx"><a class="logo-" href="index.html">JoE</a></h2></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+		<div     id='mainText78__Text78_Text6298881705' data-id='mainText78' style='' data-type="text" class='dataTypeText  inner_text mainText78   text_editor_resets' ><div  class='mainText78_ContentDiv'><h2 class="logo- ospfxwe09be0797361fb9f4efb00fd42b8ca8aossfx"><a class="logo-" href="index.html">Photo</a></h2></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+	</div>
+	<div class='menu' style='position:absolute;top:0;left:0;'>
+		<ul class='image_wa' id='ul_mainMenu63_Page1' style="display:none;top:0px;">
+			<li id='menuElement0mainMenu63Page1' class='mainMenu63_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"people.html","false")'><A href="people.html" title="Full width" class="submenu">Full width</A></li>
+			<li id='menuElement1mainMenu63Page1' class='mainMenu63_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"winteriscoming.html","false")'><A href="winteriscoming.html" title="Gallery with hero" class="submenu">Gallery with hero</A></li>
+			<li id='menuElement2mainMenu63Page1' class='mainMenu63_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"splitgrid.html","false")'><A href="splitgrid.html" title="Split Grid" class="submenu">Split Grid</A></li>
+			<li id='menuElement3mainMenu63Page1' class='mainMenu63_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"magazinelayout.html","false")'><A href="magazinelayout.html" title="Magazine layout" class="submenu">Magazine layout</A></li>
+		</ul>
+		<ul class='image_wa fixed' id='ul_mainMenu26_Page1' style="display:none;top:0px;">
+			<li id='menuElement0mainMenu26Page1' class='mainMenu26_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"people.html","false")'><A href="people.html" title="Full width" class="submenu">Full width</A></li>
+			<li id='menuElement1mainMenu26Page1' class='mainMenu26_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"winteriscoming.html","false")'><A href="winteriscoming.html" title="Gallery with hero" class="submenu">Gallery with hero</A></li>
+			<li id='menuElement2mainMenu26Page1' class='mainMenu26_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"splitgrid.html","false")'><A href="splitgrid.html" title="Split Grid" class="submenu">Split Grid</A></li>
+			<li id='menuElement3mainMenu26Page1' class='mainMenu26_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"magazinelayout.html","false")'><A href="magazinelayout.html" title="Magazine layout" class="submenu">Magazine layout</A></li>
+		</ul>
+	</div>
+
+</div>
+
+
+</body>
+
+<!-- Mirrored from site9293211.92.webydo.com/splitgrid.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Jan 2017 19:32:18 GMT -->
+</html>

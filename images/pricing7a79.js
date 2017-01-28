@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".wrapper_innerMagicWidget58_ey").parent().css("overflow","visible")});$(document).ready(function(){$(".wrapper_innerMagicWidget59_ey").parent().css("overflow","visible")});$(document).ready(function(){$(".wrapper_innerMagicWidget60_ey").parent().css("overflow","visible")})

@@ -1,0 +1,58 @@
+/********************************/
+/* gallery flex-slider */
+/********************************/
+.gallery_arrow_right, .gallery_arrow_left
+{
+	cursor:pointer;
+	z-index:9999999999;
+}
+
+div.flexslider ul.slides 
+{
+	display:block;
+	padding:0px;
+	margin:0px;
+}
+
+ul.slides li {float:left;overflow: hidden !important;}
+ul.slides li img {text-align: left;}
+
+
+div.flexslider ul.slides li 
+{
+	position:relative;
+	display:none;
+}
+
+div.flexslider ul.slides li p.flex-caption 
+{
+	width: 96%;
+	padding: 2%;
+	position: absolute; 
+	left: 0; 
+	bottom: 0; 
+	background: #000; 
+	color: #fff; 
+	text-align: left; 
+	opacity:.50;
+	filter: alpha(opacity=50);
+	
+	/*font-size: 14px; 
+	line-height: 18px;*/
+}
+
+a.flex-nav-left 
+{
+	position:absolute;
+	left:20px;
+	cursor:pointer;
+	z-index: 999999;
+}
+
+a.flex-nav-right 
+{
+	position:absolute;
+	right:20px;
+	cursor:pointer;
+	z-index: 999999;
+}

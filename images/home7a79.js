@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".wrapper_innerMagicWidget104_ey").parent().css("overflow","visible")})

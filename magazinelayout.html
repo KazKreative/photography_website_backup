@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from site9293211.92.webydo.com/magazinelayout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Jan 2017 19:32:21 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Magazine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="images/base.css"/>
+	<link rel="stylesheet" type="text/css" href="images/ip_master_pt_rtl.master7a79.css?v=69820541510"/>
+	<link rel="stylesheet" type="text/css" href="images/magazinelayout7a79.css?v=69820541510"/>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,hebrew,cyrillic"/>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,300italic,400,italic,700,700italic,900,900italic&amp;subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,hebrew,cyrillic"/>
+<script type="text/javascript" src="images/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="images/ip_master_pt_rtl.master.js"></script>
+<script type="text/javascript" src="images/jssor.slider.mini.js"></script>
+<script src="images/utils7a79.js?v=69820541510" type="text/javascript"></script>
+<script src="images/3dparallax7a79.js?v=69820541510"></script>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald" />
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        margin: 0;
+    }
+
+    div#slides_ {
+        padding: 0 !important;
+    }
+</style>
+
+
+
+
+<script>
+
+    jQuery(document).ready(function ($) {
+
+        /* Declare a function - click mouse navigators */
+
+        function addEventsinnerMagicWidget50_ey(){
+
+
+
+    /* mouse click arrows */
+
+    /* right click */
+
+                $(".rightArrow > img").on("click", function(){
+
+                    var $imagesinnerMagicWidget50_ey = $("#slider_container_innerMagicWidget50_ey .nav_innerMagicWidget50_ey"); /* setting $imagesinnerMagicWidget50_ey as array of images divs */
+                    var $titlesinnerMagicWidget50_ey = $(".galleryImageTitle_innerMagicWidget50_ey");
+                    var imageSrc = $(".imagepopup_inner > img").attr("src"); /* setting imageSrc as image url */
+                    imageSrc = imageSrc.substr(imageSrc.lastIndexOf('index.html')+1); /* setting imageSrc as image url (as absolute path) */
+                    imageSrc = imageSrc.replace(/"/g, '');
+                    if(imageSrc.lastIndexOf('_')>-1){ /* if the last underscore exists */
+                        imageSrc = imageSrc.substr(0,imageSrc.lastIndexOf('_')); /* keep only the path without the underscore and what's next */
+                    }
+                    var index=0; /* setting index as 0 */
+                    var founded_innerMagicWidget50_ey = false; /* setting a flag to false */
+                    for (index=0; index<$imagesinnerMagicWidget50_ey.length; index++){ /* a loop that going throw all the images divs in the array */
+                        var currentImage = $imagesinnerMagicWidget50_ey[index].src; /* setting currentImage as background images style (URL) of that index */
+                        currentImage = currentImage.substr(currentImage.lastIndexOf('index.html')+1); /* setting currentImage as image url (as absolute path) */
+                        currentImage = currentImage.replace(/"/g, '');
+                        if(currentImage.lastIndexOf('_')>-1){ /* if the last underscore exists */
+                            currentImage = currentImage.substr(0,currentImage.lastIndexOf('_')); /* keep only the path without the underscore and what's next */
+                        } else if(currentImage.lastIndexOf(')')>-1) {
+                            currentImage = currentImage.substr(0,currentImage.length-1);
+                        }
+
+                        if (currentImage == imageSrc) { /* if we got in the loop to our image */
+                            founded_innerMagicWidget50_ey = true; /* flag turn true */
+                            break; /* and we jumping out of the loop (and going to if flag true condition - the next line) */
+                        }
+                    }
+
+    if (founded_innerMagicWidget50_ey) { /* If the flag is set to true */
+                        var nextImage;
+    if(index == $imagesinnerMagicWidget50_ey.length-1){
+        nextImage = $imagesinnerMagicWidget50_ey[0].src;
+    } else {
+                                nextImage = $imagesinnerMagicWidget50_ey[index + 1].src;
+    }
+
+    nextImage = nextImage.replace(/"/g, '');
+    if(nextImage.lastIndexOf('_')>-1){
+        nextImage = nextImage.substr(0, nextImage.lastIndexOf('_'));
+    } else if(currentImage.lastIndexOf(')')>-1) {
+        nextImage = nextImage.substr(0, nextImage.length-5);
+    }
+
+    //$(".imagepopup_inner > img").attr("src", nextImage);
+
+    if(index == $imagesinnerMagicWidget50_ey.length-1){
+        PopUpImageResize(nextImage, $(window).find($titlesinnerMagicWidget50_ey[0]).text());
+    } else {
+        PopUpImageResize(nextImage, $(window).find($titlesinnerMagicWidget50_ey[index+1]).text());
+    }
+    }
+    });
+
+
+    /* left click */
+
+
+    $(".leftArrow > img").on("click", function(){
+
+        var $imagesinnerMagicWidget50_ey = $("#slider_container_innerMagicWidget50_ey .nav_innerMagicWidget50_ey"); /* setting $imagesinnerMagicWidget50_ey as array of images divs */
+        var $titlesinnerMagicWidget50_ey = $(".galleryImageTitle_innerMagicWidget50_ey");
+        var imageSrc = $(".imagepopup_inner > img").attr("src"); /* setting imageSrc as image url */
+        imageSrc = imageSrc.substr(imageSrc.lastIndexOf('index.html')+1); /* setting imageSrc as image url (as absolute path) */
+        imageSrc = imageSrc.replace(/"/g, '');
+        if(imageSrc.lastIndexOf('_')>-1){ /* if the last underscore exists */
+            imageSrc = imageSrc.substr(0,imageSrc.lastIndexOf('_')); /* keep only the path without the underscore and what's next */
+        }
+        var index=0; /* setting index as 0 */
+        var founded_innerMagicWidget50_ey = false; /* setting a flag to false */
+        for (index=0; index<$imagesinnerMagicWidget50_ey.length; index++){ /* a loop that going throw all the images divs in the array  */
+            var currentImage = $imagesinnerMagicWidget50_ey[index].src; /* setting currentImage as background images style (URL) of that index */
+            currentImage = currentImage.substr(currentImage.lastIndexOf('index.html')+1); /* setting currentImage as image url (as absolute path) */
+            currentImage = currentImage.replace(/"/g, '');
+            if(currentImage.lastIndexOf('_')>-1){ /* if the last underscore exists */
+                currentImage = currentImage.substr(0,currentImage.lastIndexOf('_')); /* keep only the path without the underscore and what's next */
+            } else if(currentImage.lastIndexOf(')')>-1) {
+                currentImage = currentImage.substr(0,currentImage.length-1);
+            }
+
+            if (currentImage == imageSrc) { /* if we got in the loop to our image */
+                founded_innerMagicWidget50_ey = true; /* flag turn true */
+                break; /* and we jumping out of the loop (and going to if flag true condition - the next line) */
+            }
+        }
+
+
+    if (founded_innerMagicWidget50_ey) { /* If the flag is set to true */
+                        var prevImage;
+    if(index == 0){
+        prevImage = $imagesinnerMagicWidget50_ey[$imagesinnerMagicWidget50_ey.length-1].src;
+    } else {
+        prevImage = $imagesinnerMagicWidget50_ey[index - 1].src; /* setting prevImage to the prev image URL in the array */
+    }
+
+    prevImage = prevImage.replace(/"/g, '');
+    if(prevImage.lastIndexOf('_')>-1){
+        prevImage = prevImage.substr(0, prevImage.lastIndexOf('_'));
+    } else if(currentImage.lastIndexOf(')')>-1) {
+        prevImage = prevImage.substr(0, prevImage.length-5);
+    }
+
+    // $(".imagepopup_inner > img").attr("src", prevImage); /* setting the the src of the .imagepopup_inner image to prevImage */
+
+    if(index == 0){
+        PopUpImageResize(prevImage, $(window).find($titlesinnerMagicWidget50_ey[$titlesinnerMagicWidget50_ey.length-1]).text());
+    } else {
+        PopUpImageResize(prevImage, $(window).find($titlesinnerMagicWidget50_ey[index-1]).text());
+    }
+    }
+    });
+
+
+
+
+
+    }
+
+
+
+
+    /* catching the trigger after mading the pop-ups of images from utils.js */
+
+    var chatchingTrigger = {length: 1};
+    $(chatchingTrigger).bind( 'trigger_innerMagicWidget50_ey',function(){
+        addEventsinnerMagicWidget50_ey();
+    });
+    });
+
+
+</script>
+
+
+
+
+<script>
+
+    body_str_innerMagicWidget50_ey = "";
+
+    function widgetLoaded_innerMagicWidget50_ey() {
+        body_str_innerMagicWidget50_ey = $(document.getElementById("slider_container_innerMagicWidget50_ey").parentNode).html();
+        fixWidgetAccordingToMediaQuery_innerMagicWidget50_ey('innerMagicWidget50_ey');
+    }
+
+    function rebuildWidget_innerMagicWidget50_ey(){
+        var data_images = [{"src":"http://images8.webydo.com/92/9226611/3958/D5422044-107B-31AA-A702-29FAFD0F6708.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/D5422044-107B-31AA-A702-29FAFD0F6708.jpg","title":"","description":"","href":{"linktype":1,"value":"2807540"}},{"src":"http://images8.webydo.com/92/9226611/3958/D3AA12E5-ACD8-8191-BBCC-6869CC0C78E8.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/D3AA12E5-ACD8-8191-BBCC-6869CC0C78E8.jpg","title":"","description":"","href":{"linktype":1,"value":"2807523"}},{"src":"http://images8.webydo.com/92/9226611/3958/934C02F1-CA18-C98A-5028-BDB0037DE3FD.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/934C02F1-CA18-C98A-5028-BDB0037DE3FD.jpg","title":"","description":"","href":{"linktype":1,"value":"2807009"}},{"src":"http://images8.webydo.com/92/9226611/3958/D1F9C39E-A2F8-D0EB-7DF8-FE45B9D07488.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/D1F9C39E-A2F8-D0EB-7DF8-FE45B9D07488.jpg","title":"","description":"","href":{"linktype":1,"value":"2807539"}},{"src":"http://images8.webydo.com/92/9226611/3958/4D14BD14-D837-4FC0-FE58-27AE27963404.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/4D14BD14-D837-4FC0-FE58-27AE27963404.jpg","title":"","description":"","href":{"linktype":1,"value":"2807527"}},{"src":"http://images8.webydo.com/92/9226611/3958/DCEA7862-56A2-0CF8-B898-3F704DDFC0D8.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/DCEA7862-56A2-0CF8-B898-3F704DDFC0D8.jpg","title":"","description":"","href":{"linktype":1,"value":"455768"}},{"src":"http://images8.webydo.com/92/9226611/3958/80721F7E-6A2C-87D7-9A75-60E2C137CEF9.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/80721F7E-6A2C-87D7-9A75-60E2C137CEF9.jpg","title":"","description":"","href":{"linktype":1,"value":"2805705"}},{"src":"http://images8.webydo.com/92/9226611/3958/7C8FE7A8-B2F0-3C30-32C5-78B24D0F2A5C.jpg","originalWidth":960,"originalHeight":960,"thumb":"http://images8.webydo.com/92/9226611/3958/Compress/7C8FE7A8-B2F0-3C30-32C5-78B24D0F2A5C.jpg","title":"","description":"","href":{"linktype":1,"value":"2807036"}}];
+        var sitePages = JSON.parse('{"2807540":"fooddrink.html","2807523":"citylife.html","2807009":"people.html","2807539":"ontheroad.html","2807527":"bythesea.html","455768":"winteriscoming.html","2805705":"magazinelayout.html","2807036":"splitgrid.html"}');
+        var resHtml = "";
+        var displayPieces = Math.floor((1570 - 0) / (360 + 0));
+
+        if(data_images.length == 1) {
+            displayPieces = displayPieces * 10;
+        }
+
+        var containerWidth = document.getElementById("slider_container_innerMagicWidget50_ey").style.width;
+        var containerHeight = document.getElementById("slider_container_innerMagicWidget50_ey").style.height;
+
+        for (var j = 0; j <= displayPieces; j++) {
+            for (var i = 0; i < data_images.length; i++) {
+                var json = data_images[i];
+                var step = SetImageOptimization(json.src, json.originalWidth, json.originalHeight,"innerMagicWidget50_ey", containerWidth, containerHeight);
+                var suffix = '';
+                if (step != -1) {
+                    suffix = '_' + step;
+                }
+
+                resHtml += '<div>';
+                switch (json.href.linktype) {
+
+                    case 1:
+                        resHtml += '<img u="image" class="nav_innerMagicWidget50_ey" onclick="widgets_linkToPage(\'' + sitePages[json.href.value] + '\')" src="' + json.src+suffix + '" style="cursor: pointer;" />';
+                        break;
+                    case 2:
+                        resHtml += '<img u="image" class="nav_innerMagicWidget50_ey" onclick="widgets_linkToUrl(\'' + json.href.value + '\')" src="' + json.src+suffix + '" style="cursor: pointer;" />';
+                        break;
+                    case 3:
+                        resHtml += '<img u="image" class="nav_innerMagicWidget50_ey" onclick="widgets_PopUpImage(\'' + json.src + '\',\'' + json.title + '\', true, \'trigger_innerMagicWidget50_ey\' )" src="' + json.src+suffix + '" style="cursor: pointer;" />';
+                        break;
+                    case 4:
+                        if (json.href.value) {
+                            resHtml += '<img u="image" class="nav_innerMagicWidget50_ey" onclick="widgets_scrollToElement(event,\'' + json.href.value.replace('_', '') + '\')" src="' + json.src+suffix + '" style="cursor: pointer;" />';
+                        }else{
+                            resHtml += '<img u="image" src="' + json.src+suffix + '" />';
+                        }
+                        break;
+                    default:
+                        resHtml += '<img u="image" src="' + json.src+suffix + '" />';
+                        break;
+                }
+
+                resHtml += '</div>';
+            }
+        }
+
+        $('#slides_innerMagicWidget50_ey').append(resHtml);
+        var options = {
+            $AutoPlay: true,
+            $PauseOnHover: 0,
+            $AutoPlaySteps: 1,
+            $AutoPlayInterval: 0,
+            $ArrowKeyNavigation: false,
+            $SlideEasing: $JssorEasing$.$EaseLinear,
+            $SlideDuration: 30*1000,
+            $MinDragOffsetToSlide: 20,
+            $SlideWidth: 360,
+            $SlideHeight: 360,
+            $SlideSpacing: 0,
+            $PauseOnHover: 4,
+            $Cols: data_images.length * (displayPieces + 1) - 1,
+            $DragOrientation: 0
+        };
+
+        var jssor_slider = new $JssorSlider$("slider_container_innerMagicWidget50_ey", options);
+    }
+
+    $(window).bind("load", widgetLoaded_innerMagicWidget50_ey);
+
+    $(window).on( "mediaQueriesChange", function() {
+        fixWidgetAccordingToMediaQuery_innerMagicWidget50_ey('innerMagicWidget50_ey');
+    });
+
+    $(window).on( "orientationchange", function() {
+        fixWidgetAccordingToMediaQuery_innerMagicWidget50_ey('innerMagicWidget50_ey');
+    });
+
+    function fixWidgetAccordingToMediaQuery_innerMagicWidget50_ey(widgetUniqueId)     {
+        $(document.getElementById("slider_container_" + widgetUniqueId).parentNode).html(window["body_str_" + widgetUniqueId]);
+        document.getElementById("slider_container_"+widgetUniqueId).style.width = $(document.getElementById("slider_container_"+widgetUniqueId).parentNode).css('width');
+        document.getElementById("slider_container_"+widgetUniqueId).style.height = $(document.getElementById("slider_container_"+widgetUniqueId).parentNode).css('height');
+        document.getElementById("slides_"+widgetUniqueId).style.width = $(document.getElementById("slider_container_"+widgetUniqueId).parentNode).css('width');
+        document.getElementById("slides_"+widgetUniqueId).style.height = $(document.getElementById("slider_container_"+widgetUniqueId).parentNode).css('height');
+        window["rebuildWidget_" + widgetUniqueId]();
+    }
+
+</script>
+	<link rel="stylesheet" type="text/css" href="images/main3858.css?v=DplyPub_160801.5"/>
+	<link rel="stylesheet" type="text/css" href="images/alefhebrew.css"/>
+	<script src="images/skrollr3858.js?v=DplyPub_160801.5" type='text/javascript'></script>
+	<script src="images/script3858.js?v=DplyPub_160801.5" type='text/javascript'></script>
+
+
+
+
+</head>
+<body>
+
+<div id='skrollr-body'>
+<input type="hidden" class="bp_data" data-bp="portrait" data-value="320"  data-startsfrom="479" /><input type="hidden" class="bp_data" data-bp="landscape" data-value="480"  data-startsfrom="767" /><input type="hidden" class="bp_data" data-bp="tablet" data-value="768"  data-startsfrom="959" /><input type="hidden" class="bp_data" data-bp="pc" data-value="1170" /><div id='generalSitebackgroundDiv' class='generalSitebackgroundDiv'></div><div id='innerMainPanel0' class='innerMainPanel0'></div>	<div id='mainMainPanel0' class='dataTypeMainPanel mainMainPanel0' data-type='MainPanel'>
+		<div id='innerImage52__Image52' data-id='innerImage52' data-type='Image' class='dataTypeImage image_text_caption innerImage52   ' data-parallax  data-initbr="pc"  data-0='left:28px;top:1610px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);'  data-284='left:28px;top:1610px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);'  data-717='left:28px;top:1514px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);' ><a href='javascript:void(0)' class='popup_anchor' data-src='http://images8.webydo.com/92/9293211/3958%2f14D6C3AF-ABEA-5268-B4CC-D8C1CFB1BE34.jpg' data-title='' data-originalWidth='592' data-originalHeight='478' onclick="PopUpImage('images/14d6c3af-abea-5268-b4cc-d8c1cfb1be34.jpg','','592','478')"><img data-image-fitting-type='3' data-image-position-type='' width="592" height="478"  onmouseover="handleImageEvent(event,true)"   onmouseout="handleImageEvent(event,false)"  style="position:absolute;width:592;height:478;left:0px;top:0px" alt="" title="" src="images/14d6c3af-abea-5268-b4cc-d8c1cfb1be34.jpg"    ></a>			<div  onmouseover="handleImageEvent(event,true)"   onmouseout="handleImageEvent(event,false)"  style='border: none;background: none;opacity:0;filter:alpha(opacity=0);' class='inner_text_con innerText62  imageTextCaption'><div  onmouseout="handleImageEvent(event,false)"  data-captionAnimationType='Fade In' data-captionAnimationDuration='0.5' data-captionAnimationDelay='0.0' id='innerText62__Text62' data-id='innerText62' style='' data-type="text" class='dataTypeText text_caption inner_text innerText62   text_editor_resets' ><div  class='innerText62_ContentDiv'><h2 class="Title ospfxw5bc9342e6769eaab6b1f5eaaf820462fossfx"><img alt="" width="44" height="44" data-pin-nopin="true" src="images/2b8a1ca2-62c6-4a67-4177-ec1f03745751.png" /></h2></div><div class='text_caption_background' style='background-color:transparent;opacity:0.8;filter:alpha(opacity=80);position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div></div>
+</div></a>
+		<div     id='innerText57__Text57_Text43245035' data-id='innerText57' style='' data-type="text" class='dataTypeText  inner_text innerText57   text_editor_resets'  data-parallax  data-initbr="pc"  data-0='left:85px;top:1364px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);'  data-226='left:85px;top:1364px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);'  data-597='left:85px;top:1297px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);' ><div  class='innerText57_ContentDiv'><h1 class="PageTitle ospfxwee00469ab3a6a8c033ec05d5cdcf0a8cossfx">pearly spencer</h1><h3 class="SubTitle2 ospfxwc4b2bbd5780790af2bce85848b932caeossfx">2015 &nbsp;<img alt="" width="12" height="14" data-pin-nopin="true" src="images/21e16dd0-eaab-2062-8e7d-8406e70b9d26.png" /> &nbsp;copenhagen</h3><p class="Normal ospfxwcce906f4ed383ff9d4410b871867a96eossfx">Lorem ipsum dolor sit amet, consectetur&nbsp;<br>adipiscing elit. Nunc luctus et elit vel condimentum. Maecenas placerat lacus vel a eleifend.<br>Aliquam risus</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+		<div id='innerImage60__Image60' data-id='innerImage60' data-type='Image' class='dataTypeImage image_text_caption innerImage60   ' data-parallax  data-initbr="pc"  data-0='left:483px;top:1190px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);'  data-226='left:483px;top:1190px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);'  data-543='left:483px;top:1110px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);' ><a href='javascript:void(0)' class='popup_anchor' data-src='http://images8.webydo.com/92/9293211/3958%2fEF2104EC-25EB-86AF-B35D-3716EAD5CF47.jpg' data-title='' data-originalWidth='687' data-originalHeight='1013' onclick="PopUpImage('images/ef2104ec-25eb-86af-b35d-3716ead5cf47.jpg','','687','1013')"><img data-image-fitting-type='3' data-image-position-type='' width="687" height="1013"  onmouseover="handleImageEvent(event,true)"   onmouseout="handleImageEvent(event,false)"  style="position:absolute;width:687;height:1013;left:0px;top:0px" alt="" title="" src="images/ef2104ec-25eb-86af-b35d-3716ead5cf47.jpg"    ></a>			<div  onmouseover="handleImageEvent(event,true)"   onmouseout="handleImageEvent(event,false)"  style='border: none;background: none;opacity:0;filter:alpha(opacity=0);' class='inner_text_con innerText61  imageTextCaption'><div  onmouseout="handleImageEvent(event,false)"  data-captionAnimationType='Fade In' data-captionAnimationDuration='0.5' data-captionAnimationDelay='0.0' id='innerText61__Text61' data-id='innerText61' style='' data-type="text" class='dataTypeText text_caption inner_text innerText61   text_editor_resets' ><div  class='innerText61_ContentDiv'><h2 class="Title ospfxwd22935c428d25f70448d9cd77ba7c54cossfx"><img alt="" width="44" height="44" data-pin-nopin="true" src="images/fcf5d5cc-8d72-1910-8741-78ff417d68ab.png" /></h2></div><div class='text_caption_background' style='background-color:transparent;opacity:0.8;filter:alpha(opacity=80);position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div></div>
+</div></a>
+		<div     id='innerText68__Text68_Text6482141' data-id='innerText68' style='' data-type="text" class='dataTypeText  inner_text innerText68   text_editor_resets'  data-parallax  data-initbr="pc"  data-0='left:607px;top:3250px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);'  data-2105='left:607px;top:3250px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);'  data-3015='left:607px;top:3186px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);' ><div  class='innerText68_ContentDiv'><h1 class="PageTitle ospfxwd2cdc50959dcfabd83ee093f575e40efossfx">Diamonds and Pearls</h1><h3 class="SubTitle2 ospfxwf71fc53cbfc04ebe6cc992d5a50f5d3cossfx">2015 &nbsp;<img alt="" width="12" height="14" data-pin-nopin="true" src="images/942f15a7-71e4-e6f8-129a-6e4f62b78285.png" /> &nbsp;Brussels</h3><p class="Normal ospfxw7cdcdd8195c70272623197ba28ef1a70ossfx">Lorem ipsum dolor sit amet, consectetur Nunc luctus et elit vel condimentum.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+		<div     id='innerText70__Text70_Text14760042' data-id='innerText70' style='' data-type="text" class='dataTypeText  inner_text innerText70   text_editor_resets'  data-parallax  data-initbr="pc"  data-0='left:4px;top:4078px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);'  data-2979='left:4px;top:4078px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);'  data-4126='left:4px;top:4014px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);' ><div  class='innerText70_ContentDiv'><h1 class="PageTitle ospfxw6e20356f6dfec5d7eaa4e0e580f31849ossfx">Lacey Dressup</h1><h3 class="SubTitle2 ospfxw859be3d7af8d46720face8e574b5c3d8ossfx">2015 &nbsp;<img alt="" width="12" height="14" data-pin-nopin="true" src="images/4079eaea-83a2-7456-ebe2-0b351ca80d73.png" /> &nbsp;Amsterdam</h3><p class="Normal ospfxw020d824a385c8360c2c19912e7506e7cossfx">In tempus, libero a feugiat tincidunt, arcu diam lacinia turpis, ut posuere velit eros eu turpis.&nbsp;<br>Sed &nbsp;Nam ut porta neque, et aliquam nibh. Etiam ac libero quam. Quisque dignissim at diam a porttitor. Fusce porttitor augue</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+		<div     id='innerText65__Text65_Text31592040' data-id='innerText65' style='' data-type="text" class='dataTypeText  inner_text innerText65   text_editor_resets'  data-parallax  data-initbr="pc"  data-0='left:747px;top:2505px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);'  data-1028='left:747px;top:2505px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);'  data-1722='left:747px;top:2428px;position:absolute;opacity:1;delayBefore:0;delay:0;-webkit-transform:rotate(0deg)scale(1)translateZ(0);transform:rotate(0deg)scale(1)translateZ(0);' ><div  class='innerText65_ContentDiv'><h1 class="PageTitle-white ospfxw4f62ea7a3242e4de19371e9902aec32fossfx">smokey creamy</h1><h3 class="SubTitle2 ospfxwa0057aa634f5529fd4e8bcd49b41d8aeossfx">2015 &nbsp;<img alt="" width="12" height="14" data-pin-nopin="true" src="images/68c78766-7ced-9081-ad25-f1bede140d85.png" /> &nbsp;barcelona</h3><p class="Normal-white ospfxw05b232a3559b388891fdf84326f372b7ossfx">Lorem ipsum dolor sit amet, consectetur Nunc luctus et elit vel condimentum.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+
+	<div id='mainShape24__Shape24_Shape66584'   data-id='mainShape24' class='dataTypeShape  mainShape24    mainShape' data-type='Shape' ></div>
+
+		<header><div id='mainMainRow1' class='dataTypeMainRow mainMainRow1 ' data-type='MainRow'>
+			<div id='mainMainContent2' class='dataTypeMainContent mainMainContent2' data-type='MainContent'></div>
+		</div></header>
+		<main><div id='mainMainRow3' class='dataTypeMainRow mainMainRow3 ' data-type='MainRow'>
+			<div id='mainMainContent4' class='dataTypeMainContent mainMainContent4 ContentHeight' data-type='MainContent'>		<div id='innerShape41__Shape41'   data-id='innerShape41' class='dataTypeShape  innerShape41  fit_to_bg_new  ' data-type='Shape' ></div>
+		<div id='innerMagicWidget50__MagicWidget50' data-widgetkey='332' data-id='innerMagicWidget50'  class='dataTypeMagicWidget innerMagicWidget50  fit_to_bg_new  ' data-type='MagicWidget'><div id="slider_container_innerMagicWidget50_ey" style="position: relative; top: 0px; left: 0px;  width: 1570px; height: 360px; overflow: hidden; ">     <div u="slides" id="slides_innerMagicWidget50_ey" style="position: absolute; left: 0px; top: 0px;  width: 1570px; height: 360px; overflow: hidden;"></div> </div></div>
+		<div     id='innerText53__Text53_Text23895027' data-id='innerText53' style='' data-type="text" class='dataTypeText  inner_text innerText53   text_editor_resets' ><div  class='innerText53_ContentDiv'><h1 class="PageTitle ospfxw80bb7969048843d7f1a1ebd762db9cfcossfx">wedding bells</h1><h3 class="SubTitle2 ospfxw9fa77b2bd4cfd5a2e95ac109ea70513bossfx">2014 &nbsp;<img alt="" width="12" height="14" data-pin-nopin="true" src="images/cc1d3a3e-307d-589f-f2fb-da9def608272.png" />&nbsp; 2015<i>&nbsp;&nbsp;</i><span style="font-size: 18px;">europe</span></h3></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+		<div     id='innerText54__Text54_Text4165228' data-id='innerText54' style='' data-type="text" class='dataTypeText  inner_text innerText54   text_editor_resets' ><div  class='innerText54_ContentDiv'><p class="Normal ospfxwebe7a0f14e749a1fc8e7a7a831756c66ossfx">In nunc ex, ultrices sed ex nec, bibendum auctor odio. In sed risus vitae urna molestie egestas. eros ut consequat&nbsp;condimentum, arcu nullaonsequat tortor, non fermentum massa massa at mauris. Ut ultricies eros sed magna gravida, ac fermentum elipin ornare nunc. Nullam ut tortor eu nibh iaculis tinc</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+		<div id='innerImage55__Image55' data-id='innerImage55' data-type='Image' class='dataTypeImage image_text_caption innerImage55   '><a href='javascript:void(0)' class='popup_anchor' data-src='http://images8.webydo.com/92/9293211/3958%2f25200014-0FD5-2611-81B9-356DD76E5F02.jpg' data-title='' data-originalWidth='1170' data-originalHeight='703' onclick="PopUpImage('images/25200014-0fd5-2611-81b9-356dd76e5f02.jpg','','1170','703')"><img data-image-fitting-type='3' data-image-position-type='' width="1170" height="703"  onmouseover="handleImageEvent(event,true)"   onmouseout="handleImageEvent(event,false)"  style="position:absolute;width:1170;height:703;left:0px;top:0px" alt="" title="" src="images/25200014-0fd5-2611-81b9-356dd76e5f02.jpg"    ></a>			<div  onmouseover="handleImageEvent(event,true)"   onmouseout="handleImageEvent(event,false)"  style='border: none;background: none;opacity:0;filter:alpha(opacity=0);' class='inner_text_con innerText56  imageTextCaption'><div  onmouseout="handleImageEvent(event,false)"  data-captionAnimationType='Fade In' data-captionAnimationDuration='0.5' data-captionAnimationDelay='0.0' id='innerText56__Text56' data-id='innerText56' style='' data-type="text" class='dataTypeText text_caption inner_text innerText56   text_editor_resets' ><div  class='innerText56_ContentDiv'><h2 class="Title ospfxw2b0d51accbc0915cecc844525c5b671cossfx"><img alt="" width="44" height="44" data-pin-nopin="true" src="images/d87f39cc-363e-0ded-77ac-96ef89d5b917.png" /></h2></div><div class='text_caption_background' style='background-color:transparent;opacity:0.8;filter:alpha(opacity=80);position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div></div>
+</div></a>
+		<div id='innerImage48__Image48' data-id='innerImage48' data-type='Image' class='dataTypeImage image_text_caption innerImage48   '><a href='javascript:void(0)' class='popup_anchor' data-src='http://images8.webydo.com/92/9293211/3958%2fA0FECBAA-CBBB-0610-1B2B-38E6A54E8C72.jpg' data-title='' data-originalWidth='925' data-originalHeight='626' onclick="PopUpImage('images/a0fecbaa-cbbb-0610-1b2b-38e6a54e8c72.jpg','','925','626')"><img data-image-fitting-type='3' data-image-position-type='' width="925" height="626"  onmouseover="handleImageEvent(event,true)"   onmouseout="handleImageEvent(event,false)"  style="position:absolute;width:925;height:626;left:0px;top:0px" alt="" title="" src="images/a0fecbaa-cbbb-0610-1b2b-38e6a54e8c72.jpg"    ></a>			<div  onmouseover="handleImageEvent(event,true)"   onmouseout="handleImageEvent(event,false)"  style='border: none;background: none;opacity:0;filter:alpha(opacity=0);' class='inner_text_con innerText69  imageTextCaption'><div  onmouseout="handleImageEvent(event,false)"  data-captionAnimationType='Fade In' data-captionAnimationDuration='0.5' data-captionAnimationDelay='0.0' id='innerText69__Text69' data-id='innerText69' style='' data-type="text" class='dataTypeText text_caption inner_text innerText69   text_editor_resets' ><div  class='innerText69_ContentDiv'><h2 class="Title ospfxw1137a1dbd60d4b4fb0d5c8a780cc5fa9ossfx"><img alt="" width="44" height="44" data-pin-nopin="true" src="images/2fa7e0ab-9389-3a31-cde8-f09b9be37ef8.png" /></h2></div><div class='text_caption_background' style='background-color:transparent;opacity:0.8;filter:alpha(opacity=80);position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div></div>
+</div></a>
+		<div id='innerImage63__Image63_Image18480038' data-id='innerImage63' data-type='Image' class='dataTypeImage image_text_caption innerImage63   '><a href='javascript:void(0)' class='popup_anchor' data-src='http://images8.webydo.com/92/9293211/3958%2fF65AE7C5-FCD1-E6C5-9A09-982CCFC581DE.jpg' data-title='' data-originalWidth='1170' data-originalHeight='636' onclick="PopUpImage('images/f65ae7c5-fcd1-e6c5-9a09-982ccfc581de.jpg','','1170','636')"><img data-image-fitting-type='0' data-image-position-type='' width="1170" height="636"  onmouseover="handleImageEvent(event,true)"   onmouseout="handleImageEvent(event,false)"  style="position:absolute;width:1170;height:636;left:0px;top:0px" alt="" title="" src="images/f65ae7c5-fcd1-e6c5-9a09-982ccfc581de.jpg"    ></a>			<div  onmouseover="handleImageEvent(event,true)"   onmouseout="handleImageEvent(event,false)"  style='border: none;background: none;opacity:0;filter:alpha(opacity=0);' class='inner_text_con innerText64  imageTextCaption'><div  onmouseout="handleImageEvent(event,false)"  data-captionAnimationType='Fade In' data-captionAnimationDuration='0.5' data-captionAnimationDelay='0.0' id='innerText64__Text64_Text19496439' data-id='innerText64' style='' data-type="text" class='dataTypeText text_caption inner_text innerText64   text_editor_resets' ><div  class='innerText64_ContentDiv'><h2 class="Title ospfxwf3218a3101234f78877b11eeea532698ossfx"><img alt="" width="44" height="44" data-pin-nopin="true" src="images/b034b138-30e1-1d19-bc8d-dbdb5b6c5b69.png" /></h2></div><div class='text_caption_background' style='background-color:transparent;opacity:0.8;filter:alpha(opacity=80);position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div></div>
+</div></a>
+		<div id='innerImage66__Image66' data-id='innerImage66' data-type='Image' class='dataTypeImage image_text_caption innerImage66   '><a href='javascript:void(0)' class='popup_anchor' data-src='http://images8.webydo.com/92/9293211/3958%2fD26B2BE4-35AD-F62D-E451-93091184FB65.jpg' data-title='' data-originalWidth='645' data-originalHeight='829' onclick="PopUpImage('images/d26b2be4-35ad-f62d-e451-93091184fb65.jpg','','645','829')"><img data-image-fitting-type='3' data-image-position-type='' width="645" height="829"  onmouseover="handleImageEvent(event,true)"   onmouseout="handleImageEvent(event,false)"  style="position:absolute;width:645;height:829;left:0px;top:0px" alt="" title="" src="images/d26b2be4-35ad-f62d-e451-93091184fb65.jpg"    ></a>			<div  onmouseover="handleImageEvent(event,true)"   onmouseout="handleImageEvent(event,false)"  style='border: none;background: none;opacity:0;filter:alpha(opacity=0);' class='inner_text_con innerText67  imageTextCaption'><div  onmouseout="handleImageEvent(event,false)"  data-captionAnimationType='Fade In' data-captionAnimationDuration='0.5' data-captionAnimationDelay='0.0' id='innerText67__Text67' data-id='innerText67' style='' data-type="text" class='dataTypeText text_caption inner_text innerText67   text_editor_resets' ><div  class='innerText67_ContentDiv'><h2 class="Title ospfxw79c27588d526c37738f8c5ed7b1df3b7ossfx"><img alt="" width="44" height="44" data-pin-nopin="true" src="images/ccde770d-d438-df9d-7eae-5313ea62d36c.png" /></h2></div><div class='text_caption_background' style='background-color:transparent;opacity:0.8;filter:alpha(opacity=80);position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div></div>
+</div></a>
+
+				<div class='dataTypeMenu menu left horizontal mainMenu65 ' data-type='Menu' data-name='Menu1' id='mainMenu65'><nav>					<ul>
+						<li id='mainMenuElement0mainMenu65' data-pageName='Page2' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"fooddrink.html","false")'> <A href="fooddrink.html" title="FOOD & DRINKS" class="category" >FOOD & DRINKS</A></li>
+						<li id='mainMenuElement1mainMenu65' data-pageName='Page9' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"splitgrid.html","false")'> <A href="splitgrid.html" title="ARCHITECTURE" class="category" >ARCHITECTURE</A></li>
+						<li id='mainMenuElement2mainMenu65' data-pageName='Page4' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"people.html","false")'> <A href="people.html" title="PEOPLE" class="category" >PEOPLE</A></li>
+						<li id='mainMenuElement3mainMenu65' data-pageName='Page5' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"ontheroad.html","false")'> <A href="ontheroad.html" title="ON THE ROAD" class="category" >ON THE ROAD</A></li>
+						<li id='mainMenuElement4mainMenu65' data-pageName='Page6' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"bythesea.html","false")'> <A href="bythesea.html" title="BY THE SEA" class="category" >BY THE SEA</A></li>
+						<li id='mainMenuElement5mainMenu65' data-pageName='Page7' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"winteriscoming.html","false")'> <A href="winteriscoming.html" title="WINTER IS COMING" class="category" >WINTER IS COMING</A></li>
+						<li id='mainMenuElement6mainMenu65' data-pageName='Page8' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"magazinelayout.html","false")'> <A href="magazinelayout.html" title="WEDDING BELLS" class="category" >WEDDING BELLS</A></li>
+						<li id='mainMenuElement7mainMenu65' data-pageName='Page3' class='mainMenu65_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"citylife.html","false")'> <A href="citylife.html" title="CITY LIFE" class="category" >CITY LIFE</A></li>
+					</ul>
+				</nav></div>
+				<div     id='mainText69__Text69_Text17984230' data-id='mainText69' style='' data-type="text" class='dataTypeText  inner_text mainText69   text_editor_resets' ><div  class='mainText69_ContentDiv'><p class="Normal-italic ospfxwb5e09ca59eefcfcab085705052f06206ossfx">View Albums</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div id='mainShape70__Shape70_Shape56268232'  data-reference='71' data-id='mainShape70' class='dataTypeShape  mainShape70     mobile-toggle' data-type='Shape' ></div>
+				<div class='dataTypeMenu menu left mobile mainMenu71 ' data-type='Menu' data-name='Menu1' id='mainMenu71'><nav>					<ul class="mobile-menu"><li class=""><li id="mainMenuMobElement0mainMenu71" data-pageName='Page2' class='mainMenu71_category image_wa' data-childmenu=""><A href="fooddrink.html" title="FOOD & DRINKS" class="category" >FOOD & DRINKS</A></li><li class=""><li id="mainMenuMobElement1mainMenu71" data-pageName='Page9' class='mainMenu71_category image_wa' data-childmenu=""><A href="splitgrid.html" title="ARCHITECTURE" class="category" >ARCHITECTURE</A></li><li class=""><li id="mainMenuMobElement2mainMenu71" data-pageName='Page4' class='mainMenu71_category image_wa' data-childmenu=""><A href="people.html" title="PEOPLE" class="category" >PEOPLE</A></li><li class=""><li id="mainMenuMobElement3mainMenu71" data-pageName='Page5' class='mainMenu71_category image_wa' data-childmenu=""><A href="ontheroad.html" title="ON THE ROAD" class="category" >ON THE ROAD</A></li><li class=""><li id="mainMenuMobElement4mainMenu71" data-pageName='Page6' class='mainMenu71_category image_wa' data-childmenu=""><A href="bythesea.html" title="BY THE SEA" class="category" >BY THE SEA</A></li><li class=""><li id="mainMenuMobElement5mainMenu71" data-pageName='Page7' class='mainMenu71_category image_wa' data-childmenu=""><A href="winteriscoming.html" title="WINTER IS COMING" class="category" >WINTER IS COMING</A></li><li class=""><li id="mainMenuMobElement6mainMenu71" data-pageName='Page8' class='mainMenu71_category image_wa' data-childmenu=""><A href="magazinelayout.html" title="WEDDING BELLS" class="category" >WEDDING BELLS</A></li><li class=""><li id="mainMenuMobElement7mainMenu71" data-pageName='Page3' class='mainMenu71_category image_wa' data-childmenu=""><A href="citylife.html" title="CITY LIFE" class="category" >CITY LIFE</A></li></ul>				</nav></div>
+			</div>
+		</div></main>
+		<footer><div id='mainMainRow5' class='dataTypeMainRow mainMainRow5 ' data-type='MainRow'>
+			<div id='mainMainContent6' class='dataTypeMainContent mainMainContent6' data-type='MainContent'>
+				<div id='mainShape29__Shape29_Shape44352142'   data-id='mainShape29' class='dataTypeShape  mainShape29  fit_to_bg_new  ' data-type='Shape' ></div>
+				<div     id='mainText40__Text40_Text7820415' data-id='mainText40' style='' data-type="text" class='dataTypeText  inner_text mainText40   text_editor_resets' ><div  class='mainText40_ContentDiv'><h6 class="Title-white ospfxw9cbdaefb2cda6773550f4f81400400d5ossfx">services</h6></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div     id='mainText41__Text41_Text24207917' data-id='mainText41' style='' data-type="text" class='dataTypeText  inner_text mainText41   text_editor_resets' ><div  class='mainText41_ContentDiv'><p class="Normal-italic-white ospfxw91707026d7b5ce09e35e2301c720ae82ossfx">Donec venenatis, eros ut consequat condimentum, arcu nulla consequat tortor, non fermentum massa massa at mauris. Ut ultricies eros sed magna gravida, ac fermentum elit ultrices.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div     id='mainText42__Text42_Text91667419' data-id='mainText42' style='' data-type="text" class='dataTypeText  inner_text mainText42   text_editor_resets' ><div  class='mainText42_ContentDiv'><h6 class="Title-white ospfxwd033bbd099d599089aa50efdc00ea0f8ossfx">let&#39;s talk</h6></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div     id='mainText43__Text43_Text168087321' data-id='mainText43' style='' data-type="text" class='dataTypeText  inner_text mainText43   text_editor_resets' ><div  class='mainText43_ContentDiv'><p class="Normal-italic-white ospfxwf364f7c918d4518aca509333638f2245ossfx">&nbsp;info@martioldfield.com<br>(&#43;192) - 304-888-192</p><p class="Normal-italic-white ospfxw0d762ac189b750585eff1e90decfd606ossfx">&nbsp;</p><p class="Normal-italic-white ospfxw4a6758b1de44d471bdbad5b08e0f454eossfx">Oranienburger Str. 82, 10128&nbsp;<br>Berlin, Germany.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div id='mainForm44' class='dataTypeForm mainForm44' data-type='Form' style="z-index:5;border-width:1px;border-color:transparent;border-style:none;box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 1);
+-moz-box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 1);
+-webkit-box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 1);
+position:absolute;overflow:hidden;">
+					<div id='mainShape45' class='dataTypeShape  submit_button mainShape45  ' data-type='Shape' data-formmode="FormMode"
+onClick='mainForm44_submit()' >
+						<div     id='mainText46__Text46_Text3207628' data-id='mainText46' style='' data-type="text" class='dataTypeText  inner_text mainText46   text_editor_resets' data-formmode="FormMode"
+><div  class='mainText46_ContentDiv'><h5 class="btn-white ospfxw5c821d6c91e01f26f40c39be4c5f51e7ossfx">sign up</h5></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+					</div>
+					<div id='mainGroup47' class='dataTypeGroup mainGroup47 ' data-type='Group'>
+						<div     id='mainText48__Text48_Text3272432' data-id='mainText48' style='' data-type="text" class='dataTypeText  inner_text mainText48   text_editor_resets' data-formmode="FormMode"
+><div  class='mainText48_ContentDiv'><p class="Normal-italic-white ospfxw3c280d0ccca619a8f149d3b31d52036eossfx">email</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+						<div class='dataTypeField mainField49' data-type='Field' data-mandatory="True"
+data-formmode="FormMode" 
+style='position:absolute;overflow:hidden;border-left-width:2px;border-right-width:2px;border-top-width:2px;border-bottom-width:2px;border-color:#FFFFFF;border-style:solid;'><input type='text' id='Field49_Field3312034' data-ph='' style='width:100%;height:100%;padding-top:0px;padding-bottom:0px;border:none;overflow:hidden;padding-left:60px;box-sizing:border-box;font-size:14px;font-family:serif;color:#FFFFFF;background-color:transparent;box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 1);
+-moz-box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 1);
+-webkit-box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 1);
+' onfocus="ResetValue(this,'')" onblur="ResetValue(this,'')" value=''></div>
+						<div     id='mainText50__Text50_Text3330036' data-id='mainText50' style='' data-type="text" class='dataTypeText  inner_text mainText50  none_important text_editor_resets' data-formmode="FormMode"
+data-etc="FormErrorMessage"
+><div  class='mainText50_ContentDiv'><p class="Normal-white ospfxw866c3379198d30c5bd483b33c05fe96aossfx">This field is required.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+					</div>
+					<div     id='mainText51__Text51_Text3376838' data-id='mainText51' style='' data-type="text" class='dataTypeText  inner_text mainText51  none_important text_editor_resets' data-formmode="MessageMode"
+><div  class='mainText51_ContentDiv'><h6 class="Title-white ospfxwbb30bb9c7887e79f217afe255b1bcd85ossfx">Thank You!</h6><p class="Normal-italic-white ospfxw27a3a0dac493d56ae5a0a5769be067c5ossfx">The form has been successfully sent.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+					<div     id='mainText52__Text52_Text3412840' data-id='mainText52' style='' data-type="text" class='dataTypeText  inner_text mainText52   text_editor_resets' data-formmode="FormMode"
+><div  class='mainText52_ContentDiv'><p class="Normal-italic-white ospfxwa4dbae13438b88dd0d4c3497bb973a47ossfx">Fill out your e-mail to get monthly updates:</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				</div>
+				<a href='index.html'><div id='mainImage60__Image60_Image4468811' data-id='mainImage60' data-type='Image' class='dataTypeImage  mainImage60   '><img data-image-fitting-type='3' data-image-position-type='' width="115" height="22"   style="position:absolute;width:115;height:22;left:0px;top:0px" alt="" title="Marti Oldfield" src="images/5cc242ab-046c-9c17-5bb0-f341398e7678.png"    ></div></a>
+				<div     id='mainText61__Text61_Text39916813' data-id='mainText61' style='' data-type="text" class='dataTypeText  inner_text mainText61   text_editor_resets' ><div  class='mainText61_ContentDiv'><p class="footer-text ospfxw7a2dd28d415dda564ad0fe5074bbea33ossfx">Professional photography</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div     id='mainText62__Text62_Text44179215' data-id='mainText62' style='' data-type="text" class='dataTypeText  inner_text mainText62   text_editor_resets' ><div  class='mainText62_ContentDiv'><p class="footer-text ospfxwa792f046902d837041caa4f5f15fde33ossfx">crafted using <a target="_blank" class="footer-text" href="http://www.webydo.com/" rel="nofollow">webydo</a>.</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+				<div class='dataTypeMenu menu left horizontal mainMenu63 ' data-type='Menu' data-name='Top Menu' id='mainMenu63'><nav>					<ul>
+						<li id='mainMenuElement0mainMenu63' data-pageName='Page1' class='mainMenu63_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "ul_mainMenu63_Page1")' onmouseout='javascript:MenuOut(this, event, "ul_mainMenu63_Page1")' data-childmenu='ul_mainMenu63_Page1' onclick='javascript:menuLiClick(this,event,"index-2.html","false")'> <A href="index-2.html" title="Work" class="category" >Work</A></li>
+						<li id='mainMenuElement1mainMenu63' data-pageName='pricing' class='mainMenu63_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"pricing.html","false")'> <A href="pricing.html" title="Pricing" class="category">Pricing</A></li>
+						<li id='mainMenuElement2mainMenu63' data-pageName='about' class='mainMenu63_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"about.html","false")'> <A href="about.html" title="About" class="category">About</A></li>
+						<li id='mainMenuElement3mainMenu63' data-pageName='contact' class='mainMenu63_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"contact.html","false")'> <A href="contact.html" title="Contact" class="category">Contact</A></li>
+					</ul>
+				</nav></div>
+				<div     id='mainText66__Text66_Text7696047' data-id='mainText66' style='' data-type="text" class='dataTypeText  inner_text mainText66   text_editor_resets' ><div  class='mainText66_ContentDiv'><h6 class="Title-white ospfxw1f8e83258094dbac8f4736f1a8f9c01bossfx">get my newsletter</h6></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+			</div>
+		</div></footer>
+		<div     id='mainText39__Text39_Text223860214' data-id='mainText39' style='' data-type="text" class='dataTypeText  inner_text mainText39   text_editor_resets' ><div  class='mainText39_ContentDiv'><p class="Normal-italic ospfxw269ed4ed964121e79bf94a0b302e597bossfx">follow me:&nbsp;</p></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+		<a href='http://instagram.com/' target='_blank'><div id='mainImage36__Image36_Image20160206' data-id='mainImage36' data-type='Image' class='dataTypeImage  mainImage36   '><img data-image-fitting-type='3' data-image-position-type='' width="14" height="14"   style="position:absolute;width:14;height:14;left:0px;top:0px" alt="Instagram" title="Instagram" src="images/c9572334-2ed4-6f23-812b-4711628aa199.png"    ></div></a>
+		<a href='https://www.linkedin.com/' target='_blank'><div id='mainImage37__Image37_Image33712208' data-id='mainImage37' data-type='Image' class='dataTypeImage  mainImage37   '><img data-image-fitting-type='3' data-image-position-type='' width="16" height="16"   style="position:absolute;width:16;height:16;left:0px;top:0px" alt="Linkedin" title="Linkedin" src="images/be4aec58-6194-48f5-61f4-13e7362b3c25.png"    ></div></a>
+		<a href='http://twitter.com/' target='_blank'><div id='mainImage38__Image38_Image758993212' data-id='mainImage38' data-type='Image' class='dataTypeImage  mainImage38   '><img data-image-fitting-type='3' data-image-position-type='' width="18" height="15"   style="position:absolute;width:18;height:15;left:0px;top:0px" alt="Twitter" title="Twitter" src="images/6dd5678d-b3f6-4df5-75b8-7520ecb936b2.png"    ></div></a>
+		<div class='dataTypeMenu menu left horizontal mainMenu26 ' data-type='Menu' data-name='Top Menu' id='mainMenu26'><nav>			<ul>
+				<li id='mainMenuElement0mainMenu26' data-pageName='Page1' class='mainMenu26_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "ul_mainMenu26_Page1")' onmouseout='javascript:MenuOut(this, event, "ul_mainMenu26_Page1")' data-childmenu='ul_mainMenu26_Page1' onclick='javascript:menuLiClick(this,event,"index-2.html","false")'> <A href="index-2.html" title="Work" class="category" >Work</A></li>
+				<li id='mainMenuElement1mainMenu26' data-pageName='pricing' class='mainMenu26_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"pricing.html","false")'> <A href="pricing.html" title="Pricing" class="category">Pricing</A></li>
+				<li id='mainMenuElement2mainMenu26' data-pageName='about' class='mainMenu26_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"about.html","false")'> <A href="about.html" title="About" class="category">About</A></li>
+				<li id='mainMenuElement3mainMenu26' data-pageName='contact' class='mainMenu26_category image_wa' onmouseover='javascript:MenuOver(this, event, "ltr", "")' onmouseout='javascript:MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"contact.html","false")'> <A href="contact.html" title="Contact" class="category">Contact</A></li>
+			</ul>
+		</nav></div>
+		<div id='mainShape67__Shape67_Shape43911210'  data-reference='68' data-id='mainShape67' class='dataTypeShape  mainShape67     mobile-toggle' data-type='Shape' ></div>
+		<div class='dataTypeMenu menu right mobile mainMenu68 ' data-type='Menu' data-name='Top Menu' id='mainMenu68'><nav>			<ul class="mobile-menu"><li class=""><li id="mainMenuMobElement0mainMenu68" data-pageName='Page1' class='mainMenu68_category mobile-menu-parent mobile-rtl image_wa' data-childmenu="ul_mainMenu68_Page1"><A href="index-2.html" title="Work" class="category" >Work</A><button></button><ul class="mobile-menu-children x3"><li class=""><li id="mainMenuMobElement0mainMenu68" data-pageName='people' class='mainMenu68_submenu image_wa' data-childmenu=""><A href="people.html" title="Full width" class="category">Full width</A></li><li class=""><li id="mainMenuMobElement1mainMenu68" data-pageName='winteriscoming' class='mainMenu68_submenu image_wa' data-childmenu=""><A href="winteriscoming.html" title="Gallery with hero" class="category">Gallery with hero</A></li><li class=""><li id="mainMenuMobElement2mainMenu68" data-pageName='splitgrid' class='mainMenu68_submenu image_wa' data-childmenu=""><A href="splitgrid.html" title="Split Grid" class="category">Split Grid</A></li><li class=""><li id="mainMenuMobElement3mainMenu68" data-pageName='magazinelayout' class='mainMenu68_submenu image_wa' data-childmenu=""><A href="magazinelayout.html" title="Magazine layout" class="category">Magazine layout</A></li></ul></li><li class=""><li id="mainMenuMobElement1mainMenu68" data-pageName='pricing' class='mainMenu68_category image_wa' data-childmenu=""><A href="pricing.html" title="Pricing" class="category">Pricing</A></li><li class=""><li id="mainMenuMobElement2mainMenu68" data-pageName='about' class='mainMenu68_category image_wa' data-childmenu=""><A href="about.html" title="About" class="category">About</A></li><li class=""><li id="mainMenuMobElement3mainMenu68" data-pageName='contact' class='mainMenu68_category image_wa' data-childmenu=""><A href="contact.html" title="Contact" class="category">Contact</A></li></ul>		</nav></div>
+		<div id='mainShape74__Shape74_Shape45408991'   data-id='mainShape74' class='dataTypeShape  mainShape74  fit_to_bg_new  ' data-type='Shape' ></div>
+		<div     id='mainText77__Text77_Text4827901703' data-id='mainText77' style='' data-type="text" class='dataTypeText  inner_text mainText77   text_editor_resets' ><div  class='mainText77_ContentDiv'><h2 class="logo- ospfxw8346bdd75f4abdfb6362466f9e6c1ac5ossfx"><a class="logo-" href="index.html">JoE</a></h2></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+		<div     id='mainText78__Text78_Text6298881705' data-id='mainText78' style='' data-type="text" class='dataTypeText  inner_text mainText78   text_editor_resets' ><div  class='mainText78_ContentDiv'><h2 class="logo- ospfxwe09be0797361fb9f4efb00fd42b8ca8aossfx"><a class="logo-" href="index.html">Photo</a></h2></div><div class='text_caption_background' style='background-color:transparent;opacity:1;position:absolute;left:0;bottom:0;top:0;right:0;z-index:-1;'></div></div>
+	</div>
+	<div class='menu' style='position:absolute;top:0;left:0;'>
+		<ul class='image_wa' id='ul_mainMenu63_Page1' style="display:none;top:0px;">
+			<li id='menuElement0mainMenu63Page1' class='mainMenu63_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"people.html","false")'><A href="people.html" title="Full width" class="submenu">Full width</A></li>
+			<li id='menuElement1mainMenu63Page1' class='mainMenu63_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"winteriscoming.html","false")'><A href="winteriscoming.html" title="Gallery with hero" class="submenu">Gallery with hero</A></li>
+			<li id='menuElement2mainMenu63Page1' class='mainMenu63_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"splitgrid.html","false")'><A href="splitgrid.html" title="Split Grid" class="submenu">Split Grid</A></li>
+			<li id='menuElement3mainMenu63Page1' class='mainMenu63_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"magazinelayout.html","false")'><A href="magazinelayout.html" title="Magazine layout" class="submenu">Magazine layout</A></li>
+		</ul>
+		<ul class='image_wa fixed' id='ul_mainMenu26_Page1' style="display:none;top:0px;">
+			<li id='menuElement0mainMenu26Page1' class='mainMenu26_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"people.html","false")'><A href="people.html" title="Full width" class="submenu">Full width</A></li>
+			<li id='menuElement1mainMenu26Page1' class='mainMenu26_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"winteriscoming.html","false")'><A href="winteriscoming.html" title="Gallery with hero" class="submenu">Gallery with hero</A></li>
+			<li id='menuElement2mainMenu26Page1' class='mainMenu26_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"splitgrid.html","false")'><A href="splitgrid.html" title="Split Grid" class="submenu">Split Grid</A></li>
+			<li id='menuElement3mainMenu26Page1' class='mainMenu26_submenu image_wa' style='cursor: pointer;' onmouseover='MenuOver(this, event, "ltr", "")' onmouseout='MenuOut(this, event, "")' data-childmenu='' onclick='javascript:menuLiClick(this,event,"magazinelayout.html","false")'><A href="magazinelayout.html" title="Magazine layout" class="submenu">Magazine layout</A></li>
+		</ul>
+	</div>
+
+</div>
+
+
+</body>
+
+<!-- Mirrored from site9293211.92.webydo.com/magazinelayout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Jan 2017 19:32:25 GMT -->
+</html>
